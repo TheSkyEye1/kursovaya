@@ -24,11 +24,15 @@ namespace BcpaTbIй_so_per
         bool perviynah = true;
         GameLogic logic = new GameLogic();
         int allah = 0;
-        int nebo = 0;
         bool dostup = false;
         int sec;
         int min;
         int score;
+        bool mineheker = false;
+        int winer;
+        int flagcount;
+        int tagster;
+
         
         System.Windows.Threading.DispatcherTimer Timer;
         public MainWindow()
@@ -55,146 +59,199 @@ namespace BcpaTbIй_so_per
         }
         private void But_Click(object sender, RoutedEventArgs e)
         {
-            if (dostup == true)
+            if (mineheker == false)
             {
-                int tag = Convert.ToInt32(((Button)sender).Tag);
-                if (perviynah == true)
+                if (dostup == true)
                 {
-                    logic.zakladka(allah, tag);
-                    logic.zapolnyator();
-                    perviynah = false;
-                    umnozigifashizm.IsEnabled = false;
-                    Timer.Start();
-                    if (logic.celler(tag % 10, tag / 10) == 0)
+                    int tag = Convert.ToInt32(((Button)sender).Tag);
+                    if (perviynah == true)
                     {
-                        score += 10 * allah;
-                        suker.Content = Convert.ToString(score);
-                        logic.otkrivashka(tag % 10, tag / 10);
-                        Button[] but1 = new Button[gridyc.Children.Count];
-                        gridyc.Children.CopyTo(but1, 0);
-
-                        for (int i = 0; i < but1.Length; i++)
+                        if (logic.celler(tag % 10, tag / 10) < 10)
                         {
-                            int h = Convert.ToInt32((but1[i]).Tag);
-
-                            if (logic.celler(h % 10, h / 10) >= 10 )
+                            logic.zakladka(allah, tag);
+                            logic.zapolnyator();
+                            perviynah = false;
+                            umnozigifashizm.IsEnabled = false;
+                            Timer.Start();
+                            flagcount = allah;
+                            winer = 0;
+                            if (logic.celler(tag % 10, tag / 10) == 0)
                             {
-                                logic.revert(h % 10, h / 10);
-                                (but1[i]).FontSize = 32;
-                                if (logic.celler(h % 10, h / 10) == 0)
-                                {
-                                    (but1[i]).Content = ' ';
-                                    (but1[i]).Background = Brushes.Azure;
-                                }
-                                else
-                                {
-                                    (but1[i]).Background = Brushes.LightBlue;
-                                    (but1[i]).Content = logic.celler(h % 10, h / 10);
-                                }
-                                nebo++;
-                            }
+                                score += 10 * allah;
+                                suker.Content = Convert.ToString(score);
+                                logic.otkrivashka(tag % 10, tag / 10);
+                                Button[] but1 = new Button[gridyc.Children.Count];
+                                gridyc.Children.CopyTo(but1, 0);
 
+                                for (int i = 0; i < but1.Length; i++)
+                                {
+                                    int h = Convert.ToInt32((but1[i]).Tag);
+
+                                    if (logic.celler(h % 10, h / 10) >= 10)
+                                    {
+                                        logic.revert(h % 10, h / 10);
+                                        (but1[i]).FontSize = 32;
+                                        if (logic.celler(h % 10, h / 10) == 0)
+                                        {
+
+                                            (but1[i]).Content = ' ';
+                                            (but1[i]).Background = Brushes.Azure;
+                                            logic.opened(h % 10, h / 10);
+                                        }
+                                        else
+                                        {
+                                            score += 10 * allah;
+                                            (but1[i]).Background = Brushes.LightBlue;
+                                            (but1[i]).Content = logic.celler(h % 10, h / 10);
+                                            logic.opened(h % 10, h / 10);
+                                        }
+                                    }
+
+                                }
+                            }
+                            else
+                            if (logic.celler(tag % 10, tag / 10) > 0 && logic.celler(tag % 10, tag / 10) < 9)
+                            {
+
+                                ((Button)sender).Content = logic.celler(tag % 10, tag / 10);
+                                ((Button)sender).Background = Brushes.LightBlue;
+                                ((Button)sender).FontSize = 32;
+                                score += 10 * allah;
+                                suker.Content = Convert.ToString(score);
+                                logic.opened(tag % 10, tag / 10);
+
+                            }
                         }
                     }
                     else
-                    if (logic.celler(tag % 10, tag / 10) > 0 && logic.celler(tag % 10, tag / 10) < 9)
                     {
-                        ((Button)sender).Content = logic.celler(tag % 10, tag / 10);
-                        ((Button)sender).Background = Brushes.LightBlue;
-                        ((Button)sender).FontSize = 32;
-                        nebo++;
-                        score += 10 * allah;
-                        suker.Content = Convert.ToString(score);
-                        if (nebo == 100 - allah)
+                        if (logic.celler(tag % 10, tag / 10) < 10)
                         {
-                            Timer.Stop();
-                            MessageBox.Show("Победа");
-                            umnozigifashizm.IsEnabled = true;
-                            boomer.IsEnabled = true;
+                            if (logic.celler(tag % 10, tag / 10) == 0)
+                            {
+                                score += 10 * allah;
+                                suker.Content = Convert.ToString(score);
+                                logic.otkrivashka(tag % 10, tag / 10);
+                                Button[] but1 = new Button[gridyc.Children.Count];
+                                gridyc.Children.CopyTo(but1, 0);
+
+                                for (int i = 0; i < but1.Length; i++)
+                                {
+                                    int h = Convert.ToInt32((but1[i]).Tag);
+
+                                    if (logic.celler(h % 10, h / 10) >= 10)
+                                    {
+                                        logic.revert(h % 10, h / 10);
+                                        (but1[i]).FontSize = 32;
+                                        if (logic.celler(h % 10, h / 10) == 0)
+                                        {
+
+                                            (but1[i]).Content = ' ';
+                                            (but1[i]).Background = Brushes.Azure;
+                                            logic.opened(h % 10, h / 10);
+
+                                        }
+                                        else
+                                        {
+                                            score += 10 * allah;
+                                            (but1[i]).Background = Brushes.LightBlue;
+                                            (but1[i]).Content = logic.celler(h % 10, h / 10);
+                                            logic.opened(h % 10, h / 10);
+                                        }
+                                    }
+
+                                }
+                            }
+                            else
+                            if (logic.celler(tag % 10, tag / 10) > 0 && logic.celler(tag % 10, tag / 10) != 9)
+                            {
+
+                                score += 10 * allah;
+                                suker.Content = Convert.ToString(score);
+                                ((Button)sender).Content = logic.celler(tag % 10, tag / 10);
+                                ((Button)sender).Background = Brushes.LightBlue;
+                                ((Button)sender).FontSize = 32;
+                                logic.opened(tag % 10, tag / 10);
+
+                            }
+                            else
+                            if (logic.celler(tag % 10, tag / 10) == 9)
+                            {
+                                Button[] mine = new Button[gridyc.Children.Count];
+                                gridyc.Children.CopyTo(mine, 0);
+                                for (int i = 0; i < mine.Length; i++)
+                                {
+
+                                    int n = Convert.ToInt32((mine[i]).Tag);
+                                    if (logic.celler(n % 10, n / 10) == 9)
+                                    {
+                                        (mine[i]).Content = 9;
+                                        (mine[i]).Background = Brushes.Red;
+                                        (mine[i]).FontSize = 32;
+                                    }
+                                }
+                                Timer.Stop();
+                                MessageBox.Show("Проигрыш");
+                                gridyc.IsEnabled = false;
+                                umnozigifashizm.IsEnabled = true;
+                                boomer.IsEnabled = true;
+
+                            }
                         }
                     }
+
                 }
-                else
+            }
+            else
+            {
+                if (perviynah == false)
                 {
-                    if (logic.celler(tag % 10, tag / 10) == 0)
+                    if (((Button)sender).Background != Brushes.Crimson)
                     {
-                        score += 10 * allah;
-                        suker.Content = Convert.ToString(score);
-                        logic.otkrivashka(tag % 10, tag / 10);
-                        Button[] but1 = new Button[gridyc.Children.Count];
-                        gridyc.Children.CopyTo(but1, 0);
-
-                        for (int i = 0; i < but1.Length; i++)
+                        if (flagcount != 0)
                         {
-                            int h = Convert.ToInt32((but1[i]).Tag);
-
-                            if (logic.celler(h % 10, h / 10) >= 10)
+                            int tag = Convert.ToInt32(((Button)sender).Tag);
+                            ((Button)sender).Background = Brushes.Crimson;
+                            if (logic.celler(tag % 10, tag / 10) == 9)
                             {
-                                logic.revert(h % 10, h / 10);
-                                (but1[i]).FontSize = 32;
-                                if (logic.celler(h % 10, h / 10) == 0)
-                                {
-                                    (but1[i]).Content = ' ';
-                                    (but1[i]).Background = Brushes.Azure;
-                                }
-                                else
-                                {
-                                    (but1[i]).Background = Brushes.LightBlue;
-                                    (but1[i]).Content = logic.celler(h % 10, h / 10);
-                                }
-                                nebo++;
+                                winer++;
+                                flagcount -= 1;
                             }
-
+                            else
+                            {
+                                flagcount -= 1;
+                            }
                         }
                     }
                     else
-                   if (logic.celler(tag % 10, tag / 10) > 0 && logic.celler(tag % 10, tag / 10) != 9)
                     {
-                        score += 10 * allah;
-                        suker.Content = Convert.ToString(score);
-                        ((Button)sender).Content = logic.celler(tag % 10, tag / 10);
-                        ((Button)sender).Background = Brushes.LightBlue;
-                        ((Button)sender).FontSize = 32;
-                        nebo++;
-                        if (nebo == 100 - allah)
+                        int tag = Convert.ToInt32(((Button)sender).Tag);
+                        ((Button)sender).Background = Brushes.Gray;
+                        if (logic.celler(tag % 10, tag / 10) == 9)
                         {
-                            Timer.Stop();
-                            MessageBox.Show("Победа");
-                            umnozigifashizm.IsEnabled = true;
-                            boomer.IsEnabled = true;
-                        };
-                    }
-                    else
-                    if (logic.celler(tag % 10, tag / 10) == 9)
-                    {
-                        Button[] mine = new Button[gridyc.Children.Count];
-                        gridyc.Children.CopyTo(mine, 0);
-                        for (int i = 0; i < mine.Length; i++)
-                        {
-
-                            int n = Convert.ToInt32((mine[i]).Tag);
-                            if (logic.celler(n % 10, n / 10) == 9)
-                            {
-                                (mine[i]).Content = 9;
-                                (mine[i]).Background = Brushes.Red;
-                                (mine[i]).FontSize = 32;
-                            }
+                            winer--;
+                            flagcount += 1;
                         }
+                        else
+                        {
+                            flagcount += 1;
+                        }
+                    }
+                    if(winer == allah)
+                    {
                         Timer.Stop();
-                        MessageBox.Show("Проигрыш");
-                        gridyc.IsEnabled = false;
+                        MessageBox.Show("Победа");
                         umnozigifashizm.IsEnabled = true;
                         boomer.IsEnabled = true;
-
                     }
                 }
             }
-
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            try { allah = Convert.ToInt32(boomer.Text); } catch { MessageBox.Show("Пиши циферки"); };
+            try {
+                allah = Convert.ToInt32(boomer.Text); 
             labradoryc.Content = "0:00";
             sec = 0;
             min = 0;
@@ -224,6 +281,8 @@ namespace BcpaTbIй_so_per
             Timer.Tick += new EventHandler(dispatcherTimer_Tick);
             Timer.Interval = new TimeSpan(0, 0, 1);
             boomer.IsEnabled = false;
+            }
+            catch { MessageBox.Show("Пиши циферки"); };
         }
 
         private void dispatcherTimer_Tick(object sender, EventArgs e)
@@ -238,10 +297,24 @@ namespace BcpaTbIй_so_per
 
             if (sec < 10)
               secyndyc = '0' + Convert.ToString(sec);
+            else
+                secyndyc = Convert.ToString(sec);
             labradoryc.Content = Convert.ToString(min) + ':' + secyndyc;
 
         }
 
-        
+        private void Minechanger_Click(object sender, RoutedEventArgs e)
+        {
+            if (mineheker == false)
+            {
+                mineheker = true;
+                minechanger.Content = "Миноискатель";
+            }
+            else
+            {
+                mineheker = false;
+                minechanger.Content = "Искатель";
+            }
+        }
     }
 }

@@ -43,3 +43,18 @@ C:\Users\Сергей\Desktop\kursach-sosach\BcpaTbIй so-per\BcpaTbIй so-per\o
 C:\Users\Сергей\Desktop\kursach-sosach\BcpaTbIй so-per\BcpaTbIй so-per\obj\Debug\BcpaTbIй so-per.csproj.CoreCompileInputs.cache
 C:\Users\Сергей\Desktop\kursach-sosach\BcpaTbIй so-per\BcpaTbIй so-per\obj\Debug\BcpaTbIй so-per.exe
 C:\Users\Сергей\Desktop\kursach-sosach\BcpaTbIй so-per\BcpaTbIй so-per\obj\Debug\BcpaTbIй so-per.pdb
+C:\Users\Сергей\Desktop\kursovaya\BcpaTbIй so-per\BcpaTbIй so-per\bin\Debug\BcpaTbIй so-per.exe.config
+C:\Users\Сергей\Desktop\kursovaya\BcpaTbIй so-per\BcpaTbIй so-per\bin\Debug\BcpaTbIй so-per.exe
+C:\Users\Сергей\Desktop\kursovaya\BcpaTbIй so-per\BcpaTbIй so-per\bin\Debug\BcpaTbIй so-per.pdb
+C:\Users\Сергей\Desktop\kursovaya\BcpaTbIй so-per\BcpaTbIй so-per\obj\Debug\BcpaTbIй so-per.csprojAssemblyReference.cache
+C:\Users\Сергей\Desktop\kursovaya\BcpaTbIй so-per\BcpaTbIй so-per\obj\Debug\MainWindow.g.cs
+C:\Users\Сергей\Desktop\kursovaya\BcpaTbIй so-per\BcpaTbIй so-per\obj\Debug\App.g.cs
+C:\Users\Сергей\Desktop\kursovaya\BcpaTbIй so-per\BcpaTbIй so-per\obj\Debug\BcpaTbIй so-per_MarkupCompile.cache
+C:\Users\Сергей\Desktop\kursovaya\BcpaTbIй so-per\BcpaTbIй so-per\obj\Debug\BcpaTbIй so-per_MarkupCompile.lref
+C:\Users\Сергей\Desktop\kursovaya\BcpaTbIй so-per\BcpaTbIй so-per\obj\Debug\MainWindow.baml
+C:\Users\Сергей\Desktop\kursovaya\BcpaTbIй so-per\BcpaTbIй so-per\obj\Debug\BcpaTbIй so-per.g.resources
+C:\Users\Сергей\Desktop\kursovaya\BcpaTbIй so-per\BcpaTbIй so-per\obj\Debug\BcpaTbIй_so_per.Properties.Resources.resources
+C:\Users\Сергей\Desktop\kursovaya\BcpaTbIй so-per\BcpaTbIй so-per\obj\Debug\BcpaTbIй so-per.csproj.GenerateResource.cache
+C:\Users\Сергей\Desktop\kursovaya\BcpaTbIй so-per\BcpaTbIй so-per\obj\Debug\BcpaTbIй so-per.csproj.CoreCompileInputs.cache
+C:\Users\Сергей\Desktop\kursovaya\BcpaTbIй so-per\BcpaTbIй so-per\obj\Debug\BcpaTbIй so-per.exe
+C:\Users\Сергей\Desktop\kursovaya\BcpaTbIй so-per\BcpaTbIй so-per\obj\Debug\BcpaTbIй so-per.pdb

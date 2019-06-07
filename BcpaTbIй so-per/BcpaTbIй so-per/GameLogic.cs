@@ -167,14 +167,19 @@ namespace BcpaTbIй_so_per
 
         public bool promatb(int x,int y)
         {
-            
                 if (x < 0 || x > gr.GetLength(0) - 1)
                     return false;
                 if (y < 0 || y > gr.GetLength(1) - 1)
                     return false;
                 return true;
-            
-            
         }
+
+       
+        public void opened(int x, int y)
+        {
+            gr[x, y] += 10;
+        }
+
+       
     }
 }
