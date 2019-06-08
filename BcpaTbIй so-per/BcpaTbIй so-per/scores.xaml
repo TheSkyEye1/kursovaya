@@ -1,0 +1,15 @@
+﻿<Window x:Class="BcpaTbIй_so_per.scores"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BcpaTbIй_so_per"
+        mc:Ignorable="d"
+        Title="scores" Height="265.803" Width="329.016">
+    <Grid>
+        <DataGrid x:Name="somegrid" HorizontalAlignment="Left" Height="180" Margin="10,45,0,0" VerticalAlignment="Top" Width="301"/>
+        <Button x:Name="qqq" Content="Button" HorizontalAlignment="Left" Margin="216,10,0,0" VerticalAlignment="Top" Width="95" Height="30" Click="Button_Click"/>
+        <TextBox x:Name="win_name" HorizontalAlignment="Left" Height="23" Margin="52,10,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+
+    </Grid>
+</Window>

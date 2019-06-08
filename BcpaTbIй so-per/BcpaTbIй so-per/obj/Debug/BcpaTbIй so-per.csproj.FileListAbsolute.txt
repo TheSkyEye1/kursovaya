@@ -1,0 +1,89 @@
+C:\Users\Сергей\source\repos\BcpaTbIй so-per\BcpaTbIй so-per\bin\Debug\BcpaTbIй so-per.exe.config
+C:\Users\Сергей\source\repos\BcpaTbIй so-per\BcpaTbIй so-per\bin\Debug\BcpaTbIй so-per.exe
+C:\Users\Сергей\source\repos\BcpaTbIй so-per\BcpaTbIй so-per\bin\Debug\BcpaTbIй so-per.pdb
+C:\Users\Сергей\source\repos\BcpaTbIй so-per\BcpaTbIй so-per\obj\Debug\BcpaTbIй so-per.csprojAssemblyReference.cache
+C:\Users\Сергей\source\repos\BcpaTbIй so-per\BcpaTbIй so-per\obj\Debug\MainWindow.g.cs
+C:\Users\Сергей\source\repos\BcpaTbIй so-per\BcpaTbIй so-per\obj\Debug\App.g.cs
+C:\Users\Сергей\source\repos\BcpaTbIй so-per\BcpaTbIй so-per\obj\Debug\BcpaTbIй so-per_MarkupCompile.cache
+C:\Users\Сергей\source\repos\BcpaTbIй so-per\BcpaTbIй so-per\obj\Debug\BcpaTbIй so-per_MarkupCompile.lref
+C:\Users\Сергей\source\repos\BcpaTbIй so-per\BcpaTbIй so-per\obj\Debug\MainWindow.baml
+C:\Users\Сергей\source\repos\BcpaTbIй so-per\BcpaTbIй so-per\obj\Debug\BcpaTbIй so-per.g.resources
+C:\Users\Сергей\source\repos\BcpaTbIй so-per\BcpaTbIй so-per\obj\Debug\BcpaTbIй_so_per.Properties.Resources.resources
+C:\Users\Сергей\source\repos\BcpaTbIй so-per\BcpaTbIй so-per\obj\Debug\BcpaTbIй so-per.csproj.GenerateResource.cache
+C:\Users\Сергей\source\repos\BcpaTbIй so-per\BcpaTbIй so-per\obj\Debug\BcpaTbIй so-per.csproj.CoreCompileInputs.cache
+C:\Users\Сергей\source\repos\BcpaTbIй so-per\BcpaTbIй so-per\obj\Debug\BcpaTbIй so-per.exe
+C:\Users\Сергей\source\repos\BcpaTbIй so-per\BcpaTbIй so-per\obj\Debug\BcpaTbIй so-per.pdb
+C:\Users\Сергей\Desktop\BcpaTbIй so-per\BcpaTbIй so-per\bin\Debug\BcpaTbIй so-per.exe.config
+C:\Users\Сергей\Desktop\BcpaTbIй so-per\BcpaTbIй so-per\bin\Debug\BcpaTbIй so-per.exe
+C:\Users\Сергей\Desktop\BcpaTbIй so-per\BcpaTbIй so-per\bin\Debug\BcpaTbIй so-per.pdb
+C:\Users\Сергей\Desktop\BcpaTbIй so-per\BcpaTbIй so-per\obj\Debug\BcpaTbIй so-per.csprojAssemblyReference.cache
+C:\Users\Сергей\Desktop\BcpaTbIй so-per\BcpaTbIй so-per\obj\Debug\MainWindow.g.cs
+C:\Users\Сергей\Desktop\BcpaTbIй so-per\BcpaTbIй so-per\obj\Debug\App.g.cs
+C:\Users\Сергей\Desktop\BcpaTbIй so-per\BcpaTbIй so-per\obj\Debug\BcpaTbIй so-per_MarkupCompile.cache
+C:\Users\Сергей\Desktop\BcpaTbIй so-per\BcpaTbIй so-per\obj\Debug\BcpaTbIй so-per_MarkupCompile.lref
+C:\Users\Сергей\Desktop\BcpaTbIй so-per\BcpaTbIй so-per\obj\Debug\MainWindow.baml
+C:\Users\Сергей\Desktop\BcpaTbIй so-per\BcpaTbIй so-per\obj\Debug\BcpaTbIй so-per.g.resources
+C:\Users\Сергей\Desktop\BcpaTbIй so-per\BcpaTbIй so-per\obj\Debug\BcpaTbIй_so_per.Properties.Resources.resources
+C:\Users\Сергей\Desktop\BcpaTbIй so-per\BcpaTbIй so-per\obj\Debug\BcpaTbIй so-per.csproj.GenerateResource.cache
+C:\Users\Сергей\Desktop\BcpaTbIй so-per\BcpaTbIй so-per\obj\Debug\BcpaTbIй so-per.csproj.CoreCompileInputs.cache
+C:\Users\Сергей\Desktop\BcpaTbIй so-per\BcpaTbIй so-per\obj\Debug\BcpaTbIй so-per.exe
+C:\Users\Сергей\Desktop\BcpaTbIй so-per\BcpaTbIй so-per\obj\Debug\BcpaTbIй so-per.pdb
+C:\Users\Сергей\Desktop\kursach-sosach\BcpaTbIй so-per\BcpaTbIй so-per\bin\Debug\BcpaTbIй so-per.exe.config
+C:\Users\Сергей\Desktop\kursach-sosach\BcpaTbIй so-per\BcpaTbIй so-per\bin\Debug\BcpaTbIй so-per.exe
+C:\Users\Сергей\Desktop\kursach-sosach\BcpaTbIй so-per\BcpaTbIй so-per\bin\Debug\BcpaTbIй so-per.pdb
+C:\Users\Сергей\Desktop\kursach-sosach\BcpaTbIй so-per\BcpaTbIй so-per\obj\Debug\BcpaTbIй so-per.csprojAssemblyReference.cache
+C:\Users\Сергей\Desktop\kursach-sosach\BcpaTbIй so-per\BcpaTbIй so-per\obj\Debug\MainWindow.g.cs
+C:\Users\Сергей\Desktop\kursach-sosach\BcpaTbIй so-per\BcpaTbIй so-per\obj\Debug\App.g.cs
+C:\Users\Сергей\Desktop\kursach-sosach\BcpaTbIй so-per\BcpaTbIй so-per\obj\Debug\BcpaTbIй so-per_MarkupCompile.cache
+C:\Users\Сергей\Desktop\kursach-sosach\BcpaTbIй so-per\BcpaTbIй so-per\obj\Debug\BcpaTbIй so-per_MarkupCompile.lref
+C:\Users\Сергей\Desktop\kursach-sosach\BcpaTbIй so-per\BcpaTbIй so-per\obj\Debug\MainWindow.baml
+C:\Users\Сергей\Desktop\kursach-sosach\BcpaTbIй so-per\BcpaTbIй so-per\obj\Debug\BcpaTbIй so-per.g.resources
+C:\Users\Сергей\Desktop\kursach-sosach\BcpaTbIй so-per\BcpaTbIй so-per\obj\Debug\BcpaTbIй_so_per.Properties.Resources.resources
+C:\Users\Сергей\Desktop\kursach-sosach\BcpaTbIй so-per\BcpaTbIй so-per\obj\Debug\BcpaTbIй so-per.csproj.GenerateResource.cache
+C:\Users\Сергей\Desktop\kursach-sosach\BcpaTbIй so-per\BcpaTbIй so-per\obj\Debug\BcpaTbIй so-per.csproj.CoreCompileInputs.cache
+C:\Users\Сергей\Desktop\kursach-sosach\BcpaTbIй so-per\BcpaTbIй so-per\obj\Debug\BcpaTbIй so-per.exe
+C:\Users\Сергей\Desktop\kursach-sosach\BcpaTbIй so-per\BcpaTbIй so-per\obj\Debug\BcpaTbIй so-per.pdb
+C:\Users\Сергей\Desktop\kursovaya\BcpaTbIй so-per\BcpaTbIй so-per\bin\Debug\BcpaTbIй so-per.exe.config
+C:\Users\Сергей\Desktop\kursovaya\BcpaTbIй so-per\BcpaTbIй so-per\bin\Debug\BcpaTbIй so-per.exe
+C:\Users\Сергей\Desktop\kursovaya\BcpaTbIй so-per\BcpaTbIй so-per\bin\Debug\BcpaTbIй so-per.pdb
+C:\Users\Сергей\Desktop\kursovaya\BcpaTbIй so-per\BcpaTbIй so-per\obj\Debug\BcpaTbIй so-per.csprojAssemblyReference.cache
+C:\Users\Сергей\Desktop\kursovaya\BcpaTbIй so-per\BcpaTbIй so-per\obj\Debug\MainWindow.g.cs
+C:\Users\Сергей\Desktop\kursovaya\BcpaTbIй so-per\BcpaTbIй so-per\obj\Debug\App.g.cs
+C:\Users\Сергей\Desktop\kursovaya\BcpaTbIй so-per\BcpaTbIй so-per\obj\Debug\BcpaTbIй so-per_MarkupCompile.cache
+C:\Users\Сергей\Desktop\kursovaya\BcpaTbIй so-per\BcpaTbIй so-per\obj\Debug\BcpaTbIй so-per_MarkupCompile.lref
+C:\Users\Сергей\Desktop\kursovaya\BcpaTbIй so-per\BcpaTbIй so-per\obj\Debug\MainWindow.baml
+C:\Users\Сергей\Desktop\kursovaya\BcpaTbIй so-per\BcpaTbIй so-per\obj\Debug\BcpaTbIй so-per.g.resources
+C:\Users\Сергей\Desktop\kursovaya\BcpaTbIй so-per\BcpaTbIй so-per\obj\Debug\BcpaTbIй_so_per.Properties.Resources.resources
+C:\Users\Сергей\Desktop\kursovaya\BcpaTbIй so-per\BcpaTbIй so-per\obj\Debug\BcpaTbIй so-per.csproj.GenerateResource.cache
+C:\Users\Сергей\Desktop\kursovaya\BcpaTbIй so-per\BcpaTbIй so-per\obj\Debug\BcpaTbIй so-per.csproj.CoreCompileInputs.cache
+C:\Users\Сергей\Desktop\kursovaya\BcpaTbIй so-per\BcpaTbIй so-per\obj\Debug\BcpaTbIй so-per.exe
+C:\Users\Сергей\Desktop\kursovaya\BcpaTbIй so-per\BcpaTbIй so-per\obj\Debug\BcpaTbIй so-per.pdb
+Z:\worktable\another\BcpaTbIй so-per\BcpaTbIй so-per\bin\Debug\BcpaTbIй so-per.exe.config
+Z:\worktable\another\BcpaTbIй so-per\BcpaTbIй so-per\bin\Debug\BcpaTbIй so-per.exe
+Z:\worktable\another\BcpaTbIй so-per\BcpaTbIй so-per\bin\Debug\BcpaTbIй so-per.pdb
+Z:\worktable\another\BcpaTbIй so-per\BcpaTbIй so-per\obj\Debug\BcpaTbIй so-per.csprojAssemblyReference.cache
+Z:\worktable\another\BcpaTbIй so-per\BcpaTbIй so-per\obj\Debug\MainWindow.g.cs
+Z:\worktable\another\BcpaTbIй so-per\BcpaTbIй so-per\obj\Debug\App.g.cs
+Z:\worktable\another\BcpaTbIй so-per\BcpaTbIй so-per\obj\Debug\BcpaTbIй so-per_MarkupCompile.cache
+Z:\worktable\another\BcpaTbIй so-per\BcpaTbIй so-per\obj\Debug\BcpaTbIй so-per_MarkupCompile.lref
+Z:\worktable\another\BcpaTbIй so-per\BcpaTbIй so-per\obj\Debug\MainWindow.baml
+Z:\worktable\another\BcpaTbIй so-per\BcpaTbIй so-per\obj\Debug\BcpaTbIй so-per.g.resources
+Z:\worktable\another\BcpaTbIй so-per\BcpaTbIй so-per\obj\Debug\BcpaTbIй_so_per.Properties.Resources.resources
+Z:\worktable\another\BcpaTbIй so-per\BcpaTbIй so-per\obj\Debug\BcpaTbIй so-per.csproj.GenerateResource.cache
+Z:\worktable\another\BcpaTbIй so-per\BcpaTbIй so-per\obj\Debug\BcpaTbIй so-per.csproj.CoreCompileInputs.cache
+Z:\worktable\another\BcpaTbIй so-per\BcpaTbIй so-per\obj\Debug\BcpaTbIй so-per.exe
+Z:\worktable\another\BcpaTbIй so-per\BcpaTbIй so-per\obj\Debug\BcpaTbIй so-per.pdb
+Z:\worktable\another\BcpaTbIй so-per\BcpaTbIй so-per\bin\Debug\EntityFramework.dll
+Z:\worktable\another\BcpaTbIй so-per\BcpaTbIй so-per\bin\Debug\EntityFramework.SqlServer.dll
+Z:\worktable\another\BcpaTbIй so-per\BcpaTbIй so-per\bin\Debug\System.Data.SQLite.dll
+Z:\worktable\another\BcpaTbIй so-per\BcpaTbIй so-per\bin\Debug\System.Data.SQLite.EF6.dll
+Z:\worktable\another\BcpaTbIй so-per\BcpaTbIй so-per\bin\Debug\System.Data.SQLite.Linq.dll
+Z:\worktable\another\BcpaTbIй so-per\BcpaTbIй so-per\bin\Debug\EntityFramework.xml
+Z:\worktable\another\BcpaTbIй so-per\BcpaTbIй so-per\bin\Debug\EntityFramework.SqlServer.xml
+Z:\worktable\another\BcpaTbIй so-per\BcpaTbIй so-per\bin\Debug\System.Data.SQLite.xml
+Z:\worktable\another\BcpaTbIй so-per\BcpaTbIй so-per\bin\Debug\System.Data.SQLite.dll.config
+Z:\worktable\another\BcpaTbIй so-per\BcpaTbIй so-per\obj\Debug\scores.g.cs
+Z:\worktable\another\BcpaTbIй so-per\BcpaTbIй so-per\obj\Debug\scores.baml
+Z:\worktable\another\BcpaTbIй so-per\BcpaTbIй so-per\obj\Debug\BcpaTbIй so-per.csproj.CopyComplete
+Z:\worktable\another\BcpaTbIй so-per\BcpaTbIй so-per\obj\Debug\extremebanner.g.cs
+Z:\worktable\another\BcpaTbIй so-per\BcpaTbIй so-per\obj\Debug\extremebanner.baml

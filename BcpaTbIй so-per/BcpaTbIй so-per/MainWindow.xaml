@@ -1,0 +1,17 @@
+﻿<Window x:Class="BcpaTbIй_so_per.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BcpaTbIй_so_per"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="750" Width="700" ResizeMode="NoResize">
+    <Grid HorizontalAlignment="Left" Height="650" Margin="7,14,0,0" VerticalAlignment="Top" Width="680">
+        <UniformGrid x:Name="gridyc" Height="550" Margin="0" Width="550" VerticalAlignment="Bottom" Background="#FFD6E6EC"/>
+        <Button x:Name="umnozigifashizm" Content="Стартуем" HorizontalAlignment="Left" Height="50" Margin="235,10,0,0" VerticalAlignment="Top" Width="200" Background="#FF86C552" Click="Button_Click"/>
+        <Label x:Name="labradoryc" Content="" HorizontalAlignment="Left" Height="50" Margin="460,10,0,0" VerticalAlignment="Top" Width="202" FontSize="34" BorderBrush="#FFABABAB"/>
+        <TextBox x:Name="boomer" HorizontalAlignment="Left" Height="50" Margin="164,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60" FontSize="34"/>
+        <Label x:Name="suker" Content="" HorizontalAlignment="Left" Height="50" Margin="10,10,0,0" VerticalAlignment="Top" Width="140" FontSize="34"/>
+        <Button x:Name="minechanger" Content="Искатель" HorizontalAlignment="Left" Height="37" Margin="24,655,0,-42" VerticalAlignment="Top" Width="91" Click="Minechanger_Click"/>
+    </Grid>
+</Window>
