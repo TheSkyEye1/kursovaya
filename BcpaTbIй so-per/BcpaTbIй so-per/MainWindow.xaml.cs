@@ -252,6 +252,8 @@ namespace BcpaTbIй_so_per
                         MessageBox.Show("Победа");
                         umnozigifashizm.IsEnabled = true;
                         boomer.IsEnabled = true;
+                        score += 1000 * allah;
+                        suker.Content = Convert.ToString(score);
                     }
                 }
             }

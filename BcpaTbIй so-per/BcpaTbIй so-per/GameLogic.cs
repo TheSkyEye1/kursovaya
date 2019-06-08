@@ -13,13 +13,15 @@ namespace BcpaTbIй_so_per
 
         public bool tryer(int x, int y)
         {
-            bool normal = true;
+
 
             if (x < 0 || x > gr.GetLength(0) - 1)
-                normal = false;
+                throw new Exception("Выход за границу");
             if (y < 0 || y > gr.GetLength(1) - 1)
-                normal = false;
+                throw new Exception("Выход за границу");
 
+            if (gr[x, y] == 0)
+                return false;
             int smolx = x - 1;
             if (smolx < 0)
                 smolx = 0;
@@ -41,14 +43,11 @@ namespace BcpaTbIй_so_per
                 {
                     if (gr[i, j] == 0)
                     {
-                        normal = false;
-                        break;
+                        return false;
                     }
                 }
-                if (normal == false)
-                    break;
             }
-            return normal;
+            return true ;
         }
         public void sozdavator(int n)
         {
@@ -58,7 +57,7 @@ namespace BcpaTbIй_so_per
         public void zakladka(int n, int tag)
         {
             if (n < 1) throw new Exception("Маловато мин");
-            if (n >= 71) throw new Exception("Что-то ты переборщил с бомбами");
+            if (n >= 71) throw new Exception("Многовато мин");
 
             Random nemayor = new Random();
 
@@ -149,7 +148,7 @@ namespace BcpaTbIй_so_per
                     try { if (promatb(x + 1, y - 1) == true) otkrivashka(x + 1, y - 1); } catch { };
                 }
                 else
-                if(gr[x,y] > 0 && gr[x,y] < 9)
+                if(gr[x,y] < 9)
                 {
                     gr[x, y] += 10;
                 }
