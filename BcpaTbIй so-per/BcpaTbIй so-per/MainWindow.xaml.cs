@@ -23,6 +23,7 @@ namespace BcpaTbIй_so_per
 
         bool perviynah = true;
         GameLogic logic = new GameLogic();
+
         int allah = 0;
         bool dostup = false;
         int sec;
@@ -32,7 +33,7 @@ namespace BcpaTbIй_so_per
         int winer;
         int flagcount;
 
-        
+
         System.Windows.Threading.DispatcherTimer Timer;
         public MainWindow()
         {
@@ -246,14 +247,16 @@ namespace BcpaTbIй_so_per
                             flagcount += 1;
                         }
                     }
-                    if(winer == allah)
+                    if (winer == allah)
                     {
                         Timer.Stop();
-                        MessageBox.Show("Победа");
+
+                        scores scor = new scores(score, (min * 60) + sec);
+                        scor.Owner = this;
+                        scor.Show();
+
                         umnozigifashizm.IsEnabled = true;
                         boomer.IsEnabled = true;
-                        score += 1000 * allah;
-                        suker.Content = Convert.ToString(score);
                     }
                 }
             }
