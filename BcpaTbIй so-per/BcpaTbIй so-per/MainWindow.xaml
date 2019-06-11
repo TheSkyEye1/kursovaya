@@ -5,13 +5,65 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BcpaTbIй_so_per"
         mc:Ignorable="d"
-        Title="MainWindow" Height="750" Width="700" ResizeMode="NoResize">
+        Title="So-per" Height="750" Width="700" ResizeMode="NoResize" Icon="img/Podryv-zhopy-minoy-dlya-Sergo (1).ico">
+    <Window.Background>
+        <ImageBrush ImageSource="img/EBAT.jpg"/>
+    </Window.Background>
+    <Window.Resources>
+        <Style TargetType="{x:Type Button}">
+            <Style.Triggers>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter Property="RenderTransform">
+                        <Setter.Value>
+                            <ScaleTransform ScaleX="0.85" ScaleY="0.85"/>
+                        </Setter.Value>
+                    </Setter>
+                </Trigger>
+            </Style.Triggers>
+            <Setter Property="RenderTransformOrigin" Value="0.5, 0.5"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="brdr" TextBlock.Foreground="{TemplateBinding Foreground}" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content="{TemplateBinding Content}" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.ControlBrushKey}}"/>
+        </Style>
+    </Window.Resources>
     <Grid HorizontalAlignment="Left" Height="650" Margin="7,14,0,0" VerticalAlignment="Top" Width="680">
-        <UniformGrid x:Name="gridyc" Height="550" Margin="0" Width="550" VerticalAlignment="Bottom" Background="#FFD6E6EC"/>
-        <Button x:Name="umnozigifashizm" Content="Стартуем" HorizontalAlignment="Left" Height="50" Margin="235,10,0,0" VerticalAlignment="Top" Width="200" Background="#FF86C552" Click="Button_Click"/>
-        <Label x:Name="labradoryc" Content="" HorizontalAlignment="Left" Height="50" Margin="460,10,0,0" VerticalAlignment="Top" Width="202" FontSize="34" BorderBrush="#FFABABAB"/>
-        <TextBox x:Name="boomer" HorizontalAlignment="Left" Height="50" Margin="164,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60" FontSize="34"/>
-        <Label x:Name="suker" Content="" HorizontalAlignment="Left" Height="50" Margin="10,10,0,0" VerticalAlignment="Top" Width="140" FontSize="34"/>
-        <Button x:Name="minechanger" Content="Искатель" HorizontalAlignment="Left" Height="37" Margin="24,655,0,-42" VerticalAlignment="Top" Width="91" Click="Minechanger_Click"/>
+        <UniformGrid x:Name="gridyc" Height="550" Margin="0" Width="550" VerticalAlignment="Bottom">
+            <UniformGrid.Background>
+                <ImageBrush ImageSource="img/ZADNIK_750kh700.jpg"/>
+            </UniformGrid.Background>
+        </UniformGrid>
+        <Button x:Name="umnozigifashizm" Content="Стартуем" HorizontalAlignment="Center" Height="50" Margin="240,15,240,0" VerticalAlignment="Top" Width="200" Click="Button_Click" BorderBrush="{x:Null}" Foreground="White" FontSize="24" FontFamily="Capture it(RUS BY LYAJKA)" MouseEnter="Umnozigifashizm_MouseEnter" MouseLeave="Umnozigifashizm_MouseLeave">
+            <Button.Background>
+                <ImageBrush ImageSource="img/KNOPKA_2_0.jpg"/>
+            </Button.Background>
+        </Button>
+        <Label x:Name="labradoryc" Content=" 00:00" HorizontalAlignment="Left" Height="61" Margin="500,10,0,0" VerticalAlignment="Top" Width="129" FontSize="33" Foreground="Red" FontFamily="Consolas">
+            <Label.Background>
+                <ImageBrush ImageSource="img/SChYoTChIK.png"/>
+            </Label.Background>
+        </Label>
+        <TextBox x:Name="boomer" HorizontalAlignment="Left" Height="43" Margin="185,19,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50" FontSize="34" BorderBrush="{x:Null}" SelectionBrush="White" Foreground="Red" FontFamily="Consolas" TextAlignment="Center" Text="10" CaretBrush="White">
+            <TextBox.Background>
+                <ImageBrush ImageSource="img/dly_cifr.jpg"/>
+            </TextBox.Background>
+        </TextBox>
+        <Label x:Name="suker" Content=" 00000" HorizontalAlignment="Left" Height="61" Margin="51,10,0,0" VerticalAlignment="Top" Width="129" FontSize="33" Foreground="Red" FontFamily="Consolas">
+            <Label.Background>
+                <ImageBrush ImageSource="img/SChYoTChIK.png"/>
+            </Label.Background>
+        </Label>
+        <Button x:Name="minechanger" Content="" HorizontalAlignment="Left" Height="50" Margin="448,15,0,0" VerticalAlignment="Top" Width="50" 
+                 Click="Minechanger_Click" BorderBrush="{x:Null}" Foreground="{x:Null}" MouseEnter="Minechanger_MouseEnter" MouseLeave="Minechanger_MouseLeave">
+            <Button.Background>
+                <ImageBrush ImageSource="img/Podryv-zhopy-minoy-dlya-Sergo.png"/>
+            </Button.Background>
+        </Button>
     </Grid>
 </Window>

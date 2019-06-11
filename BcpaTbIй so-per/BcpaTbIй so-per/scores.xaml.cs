@@ -20,7 +20,7 @@ namespace BcpaTbIй_so_per
     /// </summary>
     public partial class scores : Window
     {
-
+        bool firsttime = true;
         string db_name = @"C:\Users\Сергей\Desktop\kursovaya\BcpaTbIй so-per\hightscores.db";
 
         public class data
@@ -42,7 +42,7 @@ namespace BcpaTbIй_so_per
             InitializeComponent();
             scures = score;
             tumes = time;
-
+            win_name.MaxLength = 11;
             somegrid.IsReadOnly = true;
 
             shower();
@@ -114,6 +114,25 @@ namespace BcpaTbIй_so_per
             m_dbConnection.Close();
             info.Clear();
             shower();
+        }
+
+        private void Win_name_MouseEnter(object sender, MouseEventArgs e)
+        {
+            if(firsttime == true)
+            {
+                win_name.Text = null;
+                firsttime = false;
+            }
+        }
+
+        private void Qqq_MouseEnter(object sender, MouseEventArgs e)
+        {
+            qqq.Foreground = Brushes.Red;
+        }
+
+        private void Qqq_MouseLeave(object sender, MouseEventArgs e)
+        {
+            qqq.Foreground = Brushes.White;
         }
     }
 }

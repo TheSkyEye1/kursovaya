@@ -5,11 +5,55 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BcpaTbIй_so_per"
         mc:Ignorable="d"
-        Title="scores" Height="265.803" Width="329.016">
+        Title="scores" Height="340" Width="420" Icon="img/Podryv-zhopy-minoy-dlya-Sergo (1).ico" ResizeMode="NoResize">
+    <Window.Background>
+        <ImageBrush ImageSource="img/123 (1).jpg"/>
+    </Window.Background>
+    <Window.Resources>
+        <Style TargetType="{x:Type Button}">
+            <Style.Triggers>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter Property="RenderTransform">
+                        <Setter.Value>
+                            <ScaleTransform ScaleX="0.85" ScaleY="0.85"/>
+                        </Setter.Value>
+                    </Setter>
+                </Trigger>
+            </Style.Triggers>
+            <Setter Property="RenderTransformOrigin" Value="0.5, 0.5"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="brdr" TextBlock.Foreground="{TemplateBinding Foreground}" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content="{TemplateBinding Content}" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.ControlBrushKey}}"/>
+        </Style>
+    </Window.Resources>
     <Grid>
-        <DataGrid x:Name="somegrid" HorizontalAlignment="Left" Height="180" Margin="10,45,0,0" VerticalAlignment="Top" Width="301"/>
-        <Button x:Name="qqq" Content="Button" HorizontalAlignment="Left" Margin="216,10,0,0" VerticalAlignment="Top" Width="95" Height="30" Click="Button_Click"/>
-        <TextBox x:Name="win_name" HorizontalAlignment="Left" Height="23" Margin="52,10,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <DataGrid x:Name="somegrid" HorizontalAlignment="Left" Height="224" Margin="13,60,0,0" VerticalAlignment="Top" Width="375" BorderBrush="{x:Null}" Background="{x:Null}" RenderTransformOrigin="0.5,0.5">
+            <DataGrid.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="-0.181"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="-0.372"/>
+                </TransformGroup>
+            </DataGrid.RenderTransform>
+        </DataGrid>
+        <Button x:Name="qqq" Content="Принять" HorizontalAlignment="Left" Margin="307,6,0,0" VerticalAlignment="Top" Width="95" Height="34" Click="Button_Click" BorderBrush="{x:Null}" FontFamily="Capture it(RUS BY LYAJKA)" Foreground="White" FontSize="16" MouseEnter="Qqq_MouseEnter" MouseLeave="Qqq_MouseLeave">
+            <Button.Background>
+                <ImageBrush ImageSource="img/KNOPKA_2_0.jpg"/>
+            </Button.Background>
+        </Button>
+        <TextBox x:Name="win_name" HorizontalAlignment="Left" Height="34" Margin="10,6,0,0" TextWrapping="Wrap" Text="Впишите Имя" VerticalAlignment="Top" Width="160" BorderBrush="{x:Null}" FontSize="22" TextAlignment="Center" SelectionBrush="White" Foreground="White" FontFamily="Consolas" MouseEnter="Win_name_MouseEnter">
+            <TextBox.Background>
+                <ImageBrush ImageSource="img/KNOPKA_2_0.jpg"/>
+            </TextBox.Background>
+        </TextBox>
 
     </Grid>
 </Window>

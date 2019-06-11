@@ -21,8 +21,9 @@ namespace BcpaTbIй_so_per
     {
         public extremebanner(string name)
         {
+            
             InitializeComponent();
-            messss.Content = "Имя " + name + " уже есть в таблице. Заменить его?";
+            messss.Content = " Имя " + name + " уже есть в таблице.\n Заменить его?";
         }
 
         private void Da_Click(object sender, RoutedEventArgs e)
@@ -33,6 +34,26 @@ namespace BcpaTbIй_so_per
         private void Pizda_Click(object sender, RoutedEventArgs e)
         {
             this.DialogResult = false;
+        }
+
+        private void Da_MouseEnter(object sender, MouseEventArgs e)
+        {
+            da.Foreground = Brushes.Red;
+        }
+
+        private void Da_MouseLeave(object sender, MouseEventArgs e)
+        {
+            da.Foreground = Brushes.White;
+        }
+
+        private void Pizda_MouseEnter(object sender, MouseEventArgs e)
+        {
+            pizda.Foreground = Brushes.Red;
+        }
+
+        private void Pizda_MouseLeave(object sender, MouseEventArgs e)
+        {
+            pizda.Foreground = Brushes.White;
         }
     }
 }

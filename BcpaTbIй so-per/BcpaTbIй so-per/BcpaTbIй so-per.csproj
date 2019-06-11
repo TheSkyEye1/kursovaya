@@ -134,6 +134,57 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\Podryv-zhopy-minoy-dlya-Sergo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\water.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\zaschita-ot-govna.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\FLAG-MNE-V-ZAD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\ZADNIK_750kh700.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\ZADNIK_270kh330.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\ZADNIK_130kh340.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\KNOPKA_2_0.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\SChYoTChIK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\ZADNIK_DLYa_TABLITsY_2_0.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\zaschita-ot-govna228.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\Podryv-zhopy-minoy-dlya-Sergo %281%29.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\EBAT.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\dly_cifr.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\340x130.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\123.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\123 %281%29.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

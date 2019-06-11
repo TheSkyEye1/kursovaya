@@ -179,6 +179,11 @@ namespace BcpaTbIй_so_per
             gr[x, y] += 10;
         }
 
+        public void umnozhator(int x, int y)
+        {
+            gr[x, y] *= -1;
+        }
+
        
     }
 }
