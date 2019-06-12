@@ -33,8 +33,8 @@
             <Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.ControlBrushKey}}"/>
         </Style>
     </Window.Resources>
-    <Grid HorizontalAlignment="Left" Height="650" Margin="7,14,0,0" VerticalAlignment="Top" Width="680">
-        <UniformGrid x:Name="gridyc" Height="550" Margin="0" Width="550" VerticalAlignment="Bottom">
+    <Grid HorizontalAlignment="Left" Height="650" Margin="7,14,0,0" VerticalAlignment="Top" Width="680" KeyDown="Grid_KeyDown">
+        <UniformGrid x:Name="gridyc" Height="550" Margin="0,0,3,3" Width="550" VerticalAlignment="Bottom">
             <UniformGrid.Background>
                 <ImageBrush ImageSource="img/ZADNIK_750kh700.jpg"/>
             </UniformGrid.Background>

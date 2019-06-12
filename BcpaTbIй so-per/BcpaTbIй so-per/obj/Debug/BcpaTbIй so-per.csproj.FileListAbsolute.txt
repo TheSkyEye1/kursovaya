@@ -80,3 +80,5 @@ C:\Users\Сергей\Desktop\kursovaya\BcpaTbIй so-per\BcpaTbIй so-per\obj\De
 C:\Users\Сергей\Desktop\kursovaya\BcpaTbIй so-per\BcpaTbIй so-per\obj\Debug\scores.g.cs
 C:\Users\Сергей\Desktop\kursovaya\BcpaTbIй so-per\BcpaTbIй so-per\obj\Debug\extremebanner.baml
 C:\Users\Сергей\Desktop\kursovaya\BcpaTbIй so-per\BcpaTbIй so-per\obj\Debug\scores.baml
+C:\Users\Сергей\Desktop\kursovaya\BcpaTbIй so-per\BcpaTbIй so-per\obj\Debug\imsucc.g.cs
+C:\Users\Сергей\Desktop\kursovaya\BcpaTbIй so-per\BcpaTbIй so-per\obj\Debug\imsucc.baml

@@ -81,11 +81,18 @@
     <Compile Include="extremebanner.xaml.cs">
       <DependentUpon>extremebanner.xaml</DependentUpon>
     </Compile>
+    <Compile Include="imsucc.xaml.cs">
+      <DependentUpon>imsucc.xaml</DependentUpon>
+    </Compile>
     <Compile Include="scores.xaml.cs">
       <DependentUpon>scores.xaml</DependentUpon>
     </Compile>
     <Compile Include="Tests.cs" />
     <Page Include="extremebanner.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="imsucc.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

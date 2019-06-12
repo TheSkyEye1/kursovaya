@@ -35,7 +35,10 @@ namespace BcpaTbIй_so_per
         int flagcount;
         bool startbutton = false;
         bool gridыч = false;
-
+        bool cheatopened = false;
+        public int[,] massivich = new int[10,10];
+        int cheater;
+        bool cancheat = false;
 
         System.Windows.Threading.DispatcherTimer Timer;
         public MainWindow()
@@ -49,7 +52,7 @@ namespace BcpaTbIй_so_per
             gridyc.IsEnabled = true;
             gridyc.Rows = 10;
             gridyc.Columns = 10;
-            gridyc.Margin = new Thickness(3);
+            gridyc.Margin = new Thickness(0, 0, 10, 6);
             logic.sozdavator(10);
             ImageBrush ib = new ImageBrush();
             ib.ImageSource = null;
@@ -89,12 +92,18 @@ namespace BcpaTbIй_so_per
                                 if (logic.celler(tag % 10, tag / 10) < 10)
                                 {
                                     logic.zakladka(allah, tag);
+                                    for(int i = 0; i<100; i++)
+                                    {
+                                        massivich[i % 10, i / 10] = logic.gr[i % 10, i / 10];
+                                    }
                                     logic.zapolnyator();
                                     perviynah = false;
                                     umnozigifashizm.IsEnabled = false;
+                                    cancheat = true;
                                     Timer.Start();
                                     flagcount = allah;
                                     winer = 0;
+                                    
                                     if (logic.celler(tag % 10, tag / 10) == 0)
                                     {
                                         suker.Content = Convert.ToString(score);
@@ -142,7 +151,7 @@ namespace BcpaTbIй_so_per
                                         
                                     }
                                 }
-                            }
+                        }
                             else
                             {
                                 if (logic.celler(tag % 10, tag / 10) < 10)
@@ -287,8 +296,10 @@ namespace BcpaTbIй_so_per
                         }
                     }
                 }
+                
             }
             
+
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -307,7 +318,7 @@ namespace BcpaTbIй_so_per
                     gridyc.IsEnabled = true;
                     gridyc.Rows = 10;
                     gridyc.Columns = 10;
-                    gridyc.Margin = new Thickness(3);
+                    gridyc.Margin = new Thickness(0, 0, 10, 6);
                     logic.sozdavator(10);
                     suker.Content = "      0";
                     score = 0;
@@ -345,6 +356,8 @@ namespace BcpaTbIй_so_per
                 umnozigifashizm.Foreground = Brushes.Crimson;
                 startbutton = true;
                 gridыч = true;
+                cancheat = false;
+                cheatopened = false;
             }
         }
 
@@ -433,6 +446,68 @@ namespace BcpaTbIй_so_per
             if (gridыч == true)
             {
                 ((Button)sender).BorderBrush = Brushes.Blue;
+            }
+        }
+
+        private void Grid_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.I)
+            {
+                if (cheater == 0)
+                    cheater++;
+                else
+                    cheater = 0;
+            }
+            else
+            if (e.Key == Key.M)
+            {
+                if (cheater == 1)
+                    cheater++;
+                else
+                    cheater = 0;
+            }
+            else
+            if (e.Key == Key.S)
+            {
+                if (cheater == 2)
+                    cheater++;
+                else
+                    cheater = 0;
+            }
+            else
+            if (e.Key == Key.U)
+            {
+                if (cheater == 3)
+                    cheater++;
+                else
+                    cheater = 0;
+            }
+            else
+            if (e.Key == Key.C)
+            {
+                if (cheater == 4)
+                    cheater++;
+                else
+                    cheater = 0;
+            }
+            else
+            if (e.Key == Key.K)
+            {
+                if (cheater == 5)
+                {
+                    if (cheatopened == false)
+                    {
+                        if (cancheat == true)
+                        {
+                            cheatopened = true;
+                            imsucc suc = new imsucc(massivich);
+                            suc.Owner = this;
+                            suc.Show();
+                        }
+                    }
+                }
+                else
+                    cheater = 0;
             }
         }
     }
