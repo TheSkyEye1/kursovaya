@@ -34,7 +34,7 @@
         </Style>
     </Window.Resources>
     <Grid>
-        <DataGrid x:Name="somegrid" HorizontalAlignment="Left" Height="224" Margin="13,60,0,0" VerticalAlignment="Top" Width="375" BorderBrush="{x:Null}" Background="{x:Null}" RenderTransformOrigin="0.5,0.5">
+        <DataGrid x:Name="somegrid" HorizontalAlignment="Left" Height="224" Margin="13,60,0,0" VerticalAlignment="Top" Width="375" BorderBrush="{x:Null}" Background="{x:Null}" RenderTransformOrigin="0.5,0.5" Cursor="Cross">
             <DataGrid.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -44,12 +44,12 @@
                 </TransformGroup>
             </DataGrid.RenderTransform>
         </DataGrid>
-        <Button x:Name="qqq" Content="Принять" HorizontalAlignment="Left" Margin="307,6,0,0" VerticalAlignment="Top" Width="95" Height="34" Click="Button_Click" BorderBrush="{x:Null}" FontFamily="Capture it(RUS BY LYAJKA)" Foreground="White" FontSize="16" MouseEnter="Qqq_MouseEnter" MouseLeave="Qqq_MouseLeave">
+        <Button x:Name="qqq" Content="Принять" HorizontalAlignment="Left" Margin="307,6,0,0" VerticalAlignment="Top" Width="95" Height="34" Click="Button_Click" BorderBrush="{x:Null}" FontFamily="Capture it(RUS BY LYAJKA)" Foreground="White" FontSize="16" MouseEnter="Qqq_MouseEnter" MouseLeave="Qqq_MouseLeave" Cursor="Hand">
             <Button.Background>
                 <ImageBrush ImageSource="img/KNOPKA_2_0.jpg"/>
             </Button.Background>
         </Button>
-        <TextBox x:Name="win_name" HorizontalAlignment="Left" Height="34" Margin="10,6,0,0" TextWrapping="Wrap" Text="Впишите Имя" VerticalAlignment="Top" Width="160" BorderBrush="{x:Null}" FontSize="22" TextAlignment="Center" SelectionBrush="White" Foreground="White" FontFamily="Consolas" MouseEnter="Win_name_MouseEnter">
+        <TextBox x:Name="win_name" HorizontalAlignment="Left" Height="34" Margin="10,6,0,0" TextWrapping="Wrap" Text="Впишите Имя" VerticalAlignment="Top" Width="160" BorderBrush="{x:Null}" FontSize="22" TextAlignment="Center" SelectionBrush="White" Foreground="White" FontFamily="Consolas" MouseEnter="Win_name_MouseEnter" Cursor="Hand">
             <TextBox.Background>
                 <ImageBrush ImageSource="img/KNOPKA_2_0.jpg"/>
             </TextBox.Background>

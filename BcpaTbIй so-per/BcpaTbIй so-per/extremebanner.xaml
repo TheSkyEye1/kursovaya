@@ -35,12 +35,12 @@
     </Window.Resources>
     <Grid>
         <Label x:Name="messss" Content="" HorizontalAlignment="Center" Margin="23,18,25,0" VerticalAlignment="Top" Height="76" Width="486" FontSize="20" Background="{x:Null}" FontFamily="Capture it(RUS BY LYAJKA)" Foreground="Black"/>
-        <Button x:Name="da" Content="Да" HorizontalAlignment="Left" Margin="23,121,0,10" VerticalAlignment="Center" Width="120" Click="Da_Click" Height="40" FontSize="18" FontFamily="Capture it(RUS BY LYAJKA)" Foreground="White" BorderBrush="{x:Null}" MouseEnter="Da_MouseEnter" MouseLeave="Da_MouseLeave">
+        <Button x:Name="da" Content="Да" HorizontalAlignment="Left" Margin="23,121,0,10" VerticalAlignment="Center" Width="120" Click="Da_Click" Height="40" FontSize="18" FontFamily="Capture it(RUS BY LYAJKA)" Foreground="White" BorderBrush="{x:Null}" MouseEnter="Da_MouseEnter" MouseLeave="Da_MouseLeave" Cursor="Cross">
             <Button.Background>
                 <ImageBrush ImageSource="img/KNOPKA_2_0.jpg"/>
             </Button.Background>
         </Button>
-        <Button x:Name="pizda" Content="Не да" HorizontalAlignment="Right" Margin="0,121,25,10" VerticalAlignment="Center" Width="120" Click="Pizda_Click" Height="40" FontSize="18" FontFamily="Capture it(RUS BY LYAJKA)" BorderBrush="{x:Null}" Foreground="White" MouseEnter="Pizda_MouseEnter" MouseLeave="Pizda_MouseLeave">
+        <Button x:Name="pizda" Content="Не да" HorizontalAlignment="Right" Margin="0,121,25,10" VerticalAlignment="Center" Width="120" Click="Pizda_Click" Height="40" FontSize="18" FontFamily="Capture it(RUS BY LYAJKA)" BorderBrush="{x:Null}" Foreground="White" MouseEnter="Pizda_MouseEnter" MouseLeave="Pizda_MouseLeave" Cursor="Cross">
             <Button.Background>
                 <ImageBrush ImageSource="img/KNOPKA_2_0.jpg"/>
             </Button.Background>

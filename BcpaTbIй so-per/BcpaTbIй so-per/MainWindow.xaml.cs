@@ -79,11 +79,11 @@ namespace BcpaTbIй_so_per
             {
                 if (mineheker == false)
                 {
-                    if (((Button)sender).Background != Brushes.Crimson)
-                    {
+                    
                         if (dostup == true)
                         {
                             int tag = Convert.ToInt32(((Button)sender).Tag);
+                            
                             if (perviynah == true)
                             {
                                 if (logic.celler(tag % 10, tag / 10) < 10)
@@ -129,7 +129,6 @@ namespace BcpaTbIй_so_per
 
                                         }
                                         score += 10 * allah;
-                                        suker.Content = " " + Convert.ToString(score);
                                     }
                                     else
                                     if (logic.celler(tag % 10, tag / 10) > 0 && logic.celler(tag % 10, tag / 10) < 9)
@@ -140,7 +139,6 @@ namespace BcpaTbIй_so_per
                                         ((Button)sender).FontSize = 32;
                                         logic.opened(tag % 10, tag / 10);
                                         score += 10 * allah;
-                                        suker.Content = " " + Convert.ToString(score);
                                         
                                     }
                                 }
@@ -181,7 +179,6 @@ namespace BcpaTbIй_so_per
 
                                         }
                                         score += 10 * allah;
-                                        suker.Content = " " + Convert.ToString(score);
                                     }
                                     else
                                     if (logic.celler(tag % 10, tag / 10) > 0 && logic.celler(tag % 10, tag / 10) != 9)
@@ -191,7 +188,6 @@ namespace BcpaTbIй_so_per
                                         ((Button)sender).FontSize = 32;
                                         logic.opened(tag % 10, tag / 10);
                                         score += 10 * allah;
-                                        suker.Content = " " + Convert.ToString(score);
 
                                     }
                                     else
@@ -223,7 +219,17 @@ namespace BcpaTbIй_so_per
                             }
 
                         }
-                    }
+                    
+                    if (score < 100)
+                        suker.Content = " 000" + Convert.ToString(score);
+                    else
+                    if (score < 1000)
+                        suker.Content = " 00" + Convert.ToString(score);
+                    else
+                    if(score < 10000) 
+                        suker.Content = " 0" + Convert.ToString(score);
+                    else
+                        suker.Content = Convert.ToString(score);
                 }
                 else
                 {
@@ -282,6 +288,7 @@ namespace BcpaTbIй_so_per
                     }
                 }
             }
+            
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -290,7 +297,9 @@ namespace BcpaTbIй_so_per
             {
                 try
                 {
-                    allah = Convert.ToInt32(boomer.Text);
+                    if (Convert.ToInt32(boomer.Text) > 0 && Convert.ToInt32(boomer.Text) < 71)
+                    { 
+                        allah = Convert.ToInt32(boomer.Text);
                     labradoryc.Content = "     0:00";
                     sec = 0;
                     min = 0;
@@ -318,7 +327,7 @@ namespace BcpaTbIй_so_per
                         but.BorderThickness = new Thickness(2);
                         but.FontFamily = new FontFamily("Consolas");
                         gridyc.Children.Add(but);
-                        
+
 
                     }
                     perviynah = true;
@@ -327,6 +336,7 @@ namespace BcpaTbIй_so_per
                     Timer = new System.Windows.Threading.DispatcherTimer();
                     Timer.Tick += new EventHandler(dispatcherTimer_Tick);
                     Timer.Interval = new TimeSpan(0, 0, 1);
+                    }
                 }
                 catch { MessageBox.Show("Пиши циферки"); };
                 suker.Content = " 00000";
@@ -383,7 +393,7 @@ namespace BcpaTbIй_so_per
         {
             if (startbutton == false)
             {
-                umnozigifashizm.Foreground = Brushes.Crimson;
+                umnozigifashizm.Foreground = Brushes.Red;
             }
         }
 
@@ -411,6 +421,10 @@ namespace BcpaTbIй_so_per
             if (gridыч == true)
             {
                 ((Button)sender).BorderBrush = Brushes.SeaGreen;
+                if (mineheker == false)
+                    ((Button)sender).Cursor = Cursors.Cross;
+                else
+                    ((Button)sender).Cursor = Cursors.Help;
             }
         }
 
