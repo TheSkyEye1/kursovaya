@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BcpaTbIй_so_per"
         mc:Ignorable="d"
-        Title="scores" Height="340" Width="420" Icon="img/Podryv-zhopy-minoy-dlya-Sergo (1).ico" ResizeMode="NoResize" WindowStyle="None" WindowStartupLocation="CenterOwner">
+        Title="scores" Height="750" Width="700" Icon="img/Podryv-zhopy-minoy-dlya-Sergo (1).ico" ResizeMode="NoResize" WindowStyle="None" WindowStartupLocation="CenterOwner">
     <Window.Background>
         <ImageBrush ImageSource="img/123 (1).jpg"/>
     </Window.Background>
@@ -34,7 +34,11 @@
         </Style>
     </Window.Resources>
     <Grid>
-        <DataGrid x:Name="somegrid" HorizontalAlignment="Left" Height="249" Margin="17,67,0,0" VerticalAlignment="Top" Width="380" BorderBrush="{x:Null}" Background="{x:Null}" RenderTransformOrigin="0.5,0.5" Cursor="Cross">
+        <Grid.Background>
+            <ImageBrush ImageSource="img/ffffffffffffffon.jpg"/>
+        </Grid.Background>
+
+        <DataGrid x:Name="somegrid" HorizontalAlignment="Center" Height="398" Margin="95,0,93,129" VerticalAlignment="Bottom" Width="512" BorderBrush="{x:Null}" Background="{x:Null}" RenderTransformOrigin="0.5,0.5" Cursor="Cross">
             <DataGrid.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -44,21 +48,66 @@
                 </TransformGroup>
             </DataGrid.RenderTransform>
         </DataGrid>
-        <Button x:Name="qqq" Content="Принять" HorizontalAlignment="Left" Margin="315,10,0,0" VerticalAlignment="Top" Width="95" Height="34" Click="Button_Click" BorderBrush="{x:Null}" FontFamily="Capture it(RUS BY LYAJKA)" Foreground="White" FontSize="16" MouseEnter="Qqq_MouseEnter" MouseLeave="Qqq_MouseLeave" Cursor="Hand">
+        <Button x:Name="qqq" Content="Принять" HorizontalAlignment="Left" Margin="464,141,0,0" VerticalAlignment="Top" Width="160" Height="60" Click="Button_Click" BorderBrush="{x:Null}" FontFamily="Capture it(RUS BY LYAJKA)" Foreground="White" FontSize="22" MouseEnter="Qqq_MouseEnter" MouseLeave="Qqq_MouseLeave" Cursor="Hand">
             <Button.Background>
                 <ImageBrush ImageSource="img/KNOPKA_2_0.jpg"/>
             </Button.Background>
         </Button>
-        <TextBox x:Name="win_name" HorizontalAlignment="Left" Height="34" Margin="10,10,0,0" TextWrapping="Wrap" Text="Впишите Имя " VerticalAlignment="Top" Width="160" BorderBrush="{x:Null}" FontSize="22" TextAlignment="Center" SelectionBrush="White" Foreground="White" FontFamily="Consolas" MouseEnter="Win_name_MouseEnter" Cursor="Hand" TextChanged="Win_name_TextChanged">
-            <TextBox.Background>
-                <ImageBrush ImageSource="img/KNOPKA_2_0.jpg"/>
-            </TextBox.Background>
-        </TextBox>
-        <Button Content="Close" HorizontalAlignment="Left" Height="34" Margin="234,10,0,0" VerticalAlignment="Top" Width="40" BorderBrush="{x:Null}" Click="Button_Click_1">
+        <Button x:Name="игеук" Content="Button" HorizontalAlignment="Left" Height="60" Margin="84,141,0,0" VerticalAlignment="Top" Width="240" BorderBrush="{x:Null}" Foreground="{x:Null}">
             <Button.Background>
-                <ImageBrush ImageSource="img/ZADNIK_DLYa_TABLITsY_2_0.jpg"/>
+                <ImageBrush ImageSource="img/KNOPKA_2_0.jpg"/>
             </Button.Background>
         </Button>
+
+        <TextBox x:Name="win_name" HorizontalAlignment="Left" Height="37" Margin="97,155,0,0" TextWrapping="Wrap" Text="Впишите Имя" VerticalAlignment="Top" Width="217" BorderBrush="{x:Null}" FontSize="25" SelectionBrush="White" Foreground="White" FontFamily="Capture it(RUS BY LYAJKA)" MouseEnter="Win_name_MouseEnter" Cursor="Hand" TextChanged="Win_name_TextChanged" TextAlignment="Center" Background="{x:Null}"/>
+        <Button x:Name="but" Content="Close" HorizontalAlignment="Center" Height="60" Margin="364,141,276,549" VerticalAlignment="Center" Width="60" BorderBrush="{x:Null}" Click="Button_Click_1" RenderTransformOrigin="0.492,0.508" Foreground="{x:Null}" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave">
+            <Button.Background>
+                <ImageBrush ImageSource="img/knopka-vykl.png"/>
+            </Button.Background>
+        </Button>
+        <Label Content="Менятель результатов" HorizontalAlignment="Left" Height="71" Margin="97,39,0,0" VerticalAlignment="Top" Width="538" FontFamily="Capture it(RUS BY LYAJKA)" FontSize="40" RenderTransformOrigin="0.5,0.5" Background="{x:Null}" Foreground="Black">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-1.855"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Label Content="Менятель результатов" HorizontalAlignment="Left" Height="71" Margin="92,36,0,0" VerticalAlignment="Top" Width="538" FontFamily="Capture it(RUS BY LYAJKA)" FontSize="40" RenderTransformOrigin="0.5,0.5" Foreground="#FFF7F0F0">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-1.855"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Label Content="tm" HorizontalAlignment="Left" Height="24" Margin="607,29,0,0" VerticalAlignment="Top" Width="28" FontFamily="Capture it(RUS BY LYAJKA)" Foreground="White"/>
+        <Label Content="* - Торговая марка компании Rezmenyala™" HorizontalAlignment="Left" Height="28" Margin="391,712,0,0" VerticalAlignment="Top" Width="299" FontFamily="Capture it(RUS BY LYAJKA)"/>
+        <Label Content="* - Торговая марка компании Rezmenyala™" HorizontalAlignment="Left" Height="28" Margin="388,712,0,0" VerticalAlignment="Top" Width="299" FontFamily="Capture it(RUS BY LYAJKA)" Background="{x:Null}" Foreground="White"/>
+        <Label Content="7000" HorizontalAlignment="Left" Height="47" Margin="539,67,0,0" VerticalAlignment="Top" Width="92" FontFamily="Capture it(RUS BY LYAJKA)" Foreground="#FF420909" FontSize="36" RenderTransformOrigin="0.5,0.5">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="9.976"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Label Content="7000" HorizontalAlignment="Left" Height="48" Margin="536,66,0,0" VerticalAlignment="Top" Width="92" FontFamily="Capture it(RUS BY LYAJKA)" Foreground="Red" FontSize="36" RenderTransformOrigin="0.5,0.5" Background="{x:Null}">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="9.976"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
 
     </Grid>
 </Window>

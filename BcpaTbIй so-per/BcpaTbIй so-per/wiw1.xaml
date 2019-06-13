@@ -34,7 +34,7 @@
         </Style>
     </Window.Resources>
     <Grid>
-        <DataGrid x:Name="somegrid" HorizontalAlignment="Left" Height="245" Margin="16,67,0,0" VerticalAlignment="Top" Width="371" BorderBrush="{x:Null}" Background="{x:Null}" RenderTransformOrigin="0.5,0.5" Cursor="Cross">
+        <DataGrid x:Name="somegrid" HorizontalAlignment="Left" Height="250" Margin="16,67,0,0" VerticalAlignment="Top" Width="378" BorderBrush="{x:Null}" Background="{x:Null}" RenderTransformOrigin="0.5,0.5" Cursor="Cross">
             <DataGrid.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -44,8 +44,8 @@
                 </TransformGroup>
             </DataGrid.RenderTransform>
         </DataGrid>
-        <Label Content="Таблицус Рекордорусов" HorizontalAlignment="Left" Height="32" Margin="67,15,0,0" VerticalAlignment="Top" Width="289" FontFamily="Capture it(RUS BY LYAJKA)" FontSize="20" Foreground="#FFF0BDBD"/>
-        <Label Content="Таблицус Рекордорусов" HorizontalAlignment="Left" Height="32" Margin="65,15,0,0" VerticalAlignment="Top" Width="289" FontFamily="Capture it(RUS BY LYAJKA)" FontSize="20" Foreground="#FF2C1212"/>
+        <Label Content="Таблицус Рекордорусов" HorizontalAlignment="Left" Height="32" Margin="67,15,0,0" VerticalAlignment="Top" Width="289" FontFamily="Capture it(RUS BY LYAJKA)" FontSize="20" Foreground="#FFE87878"/>
+        <Label Content="Таблицус Рекордорусов" HorizontalAlignment="Left" Height="32" Margin="65,15,0,0" VerticalAlignment="Top" Width="289" FontFamily="Capture it(RUS BY LYAJKA)" FontSize="20" Foreground="#FF8D0303"/>
 
     </Grid>
 </Window>

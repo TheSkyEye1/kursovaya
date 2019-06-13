@@ -41,34 +41,34 @@
         </UniformGrid>
         <Button x:Name="umnozigifashizm" Content="" HorizontalAlignment="Center" Height="92" Margin="291,0,289,0" VerticalAlignment="Top" Width="100" Click="Button_Click" Foreground="White" FontSize="24" FontFamily="Capture it(RUS BY LYAJKA)" MouseEnter="Umnozigifashizm_MouseEnter" MouseLeave="Umnozigifashizm_MouseLeave" Cursor="Hand" BorderBrush="{x:Null}">
             <Button.Background>
-                <ImageBrush ImageSource="img/БОШКА.png"/>
+                <ImageBrush ImageSource="img/Obychnoe-litso.png"/>
             </Button.Background>
         </Button>
-        <Label x:Name="labradoryc" Content=" 00:00" HorizontalAlignment="Left" Height="61" Margin="468,10,0,0" VerticalAlignment="Top" Width="129" FontSize="33" Foreground="Red" FontFamily="Consolas">
+        <Label x:Name="labradoryc" Content=" 00:00" HorizontalAlignment="Left" Height="61" Margin="451,10,0,0" VerticalAlignment="Top" Width="129" FontSize="33" Foreground="Red" FontFamily="Consolas">
             <Label.Background>
                 <ImageBrush ImageSource="img/SChYoTChIK.png"/>
             </Label.Background>
         </Label>
-        <TextBox x:Name="boomer" HorizontalAlignment="Left" Height="43" Margin="230,13,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50" FontSize="34" BorderBrush="{x:Null}" SelectionBrush="White" Foreground="Red" FontFamily="Consolas" TextAlignment="Center" Text="10" CaretBrush="White" Cursor="Hand">
+        <TextBox x:Name="boomer" HorizontalAlignment="Left" Height="50" Margin="236,22,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50" FontSize="34" BorderBrush="{x:Null}" SelectionBrush="White" Foreground="Red" FontFamily="Consolas" TextAlignment="Center" Text="10" CaretBrush="White" Cursor="Hand">
             <TextBox.Background>
                 <ImageBrush ImageSource="img/dly_cifr.jpg"/>
             </TextBox.Background>
         </TextBox>
-        <Label x:Name="suker" Content=" 00000" HorizontalAlignment="Left" Height="61" Margin="64,10,0,0" VerticalAlignment="Top" Width="129" FontSize="33" Foreground="Red" FontFamily="Consolas">
+        <Label x:Name="suker" Content=" 00000" HorizontalAlignment="Left" Height="61" Margin="102,10,0,0" VerticalAlignment="Top" Width="129" FontSize="33" Foreground="Red" FontFamily="Consolas">
             <Label.Background>
                 <ImageBrush ImageSource="img/SChYoTChIK.png"/>
             </Label.Background>
         </Label>
-        <Button x:Name="minechanger" Content="" HorizontalAlignment="Left" Height="50" Margin="402,13,0,0" VerticalAlignment="Top" Width="50" 
+        <Button x:Name="minechanger" Content="" HorizontalAlignment="Left" Height="50" Margin="396,22,0,0" VerticalAlignment="Top" Width="50" 
                  Click="Minechanger_Click" BorderBrush="{x:Null}" Foreground="{x:Null}" MouseEnter="Minechanger_MouseEnter" MouseLeave="Minechanger_MouseLeave" Cursor="Hand">
             <Button.Background>
                 <ImageBrush ImageSource="img/Podryv-zhopy-minoy-dlya-Sergo.png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="spravka" Content="?" HorizontalAlignment="Left" Height="40" Margin="620,23,0,0" VerticalAlignment="Top" Width="40" Background="{x:Null}" Foreground="White" BorderBrush="{x:Null}" FontFamily="Capture it(RUS BY LYAJKA)" FontSize="36" Click="Spravka_Click"/>
-        <Button x:Name="pi" Content="Pi" HorizontalAlignment="Left" Height="40" Margin="19,20,0,0" VerticalAlignment="Top" Width="40" Click="Pi_Click">
+        <Button x:Name="spravka" Content="?" HorizontalAlignment="Center" Height="50" Margin="598,21,32,665" VerticalAlignment="Center" Width="50" Background="{x:Null}" Foreground="White" BorderBrush="{x:Null}" FontFamily="Capture it(RUS BY LYAJKA)" FontSize="45" Click="Spravka_Click" MouseEnter="Spravka_MouseEnter" MouseLeave="Spravka_MouseLeave"/>
+        <Button x:Name="pi" Content="Pi" HorizontalAlignment="Center" Height="50" Margin="32,22,598,664" VerticalAlignment="Center" Width="50" Click="Pi_Click" BorderBrush="{x:Null}" Foreground="{x:Null}" MouseEnter="Pi_MouseEnter" MouseLeave="Pi_MouseLeave">
             <Button.Background>
-                <ImageBrush ImageSource="img/EBAT.jpg"/>
+                <ImageBrush ImageSource="img/kubok.png"/>
             </Button.Background>
         </Button>
     </Grid>

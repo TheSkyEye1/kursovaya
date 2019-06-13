@@ -22,12 +22,13 @@ namespace BcpaTbIй_so_per
     public partial class MainWindow : Window
     {
         BitmapImage minepng;
-        BitmapImage butback;
         BitmapImage minecheck;
         BitmapImage lico;
         BitmapImage lico1;
         BitmapImage lico2;
         BitmapImage lico3;
+        BitmapImage lico4;
+        BitmapImage lico5;
         bool perviynah = true;
         GameLogic logic = new GameLogic();
         int allah = 0;
@@ -45,6 +46,7 @@ namespace BcpaTbIй_so_per
         int cheater;
         bool cancheat = false;
         int pipecc = 0;
+        int licoint = 0;
 
         wiw1 wiw;
 
@@ -55,17 +57,20 @@ namespace BcpaTbIй_so_per
 
         System.Windows.Threading.DispatcherTimer Timer;
         System.Windows.Threading.DispatcherTimer Tumer;
+        System.Windows.Threading.DispatcherTimer Trimer;
         public MainWindow()
         {
             InitializeComponent();
             minepng = new BitmapImage(new Uri(@"pack://application:,,,/img/Podryv-zhopy-minoy-dlya-Sergo.png", UriKind.Absolute));
-            butback = new BitmapImage(new Uri(@"pack://application:,,,/img/zaschita-ot-govna228.png", UriKind.Absolute));
             minecheck = new BitmapImage(new Uri(@"pack://application:,,,/img/FLAG-MNE-V-ZAD.png", UriKind.Absolute));
 
-            lico = new BitmapImage(new Uri(@"pack://application:,,,/img/БОШКА.png", UriKind.Absolute));
-            lico1 = new BitmapImage(new Uri(@"pack://application:,,,/img/БОШКА-ПРОИГРЫШ.png", UriKind.Absolute));
-            lico2 = new BitmapImage(new Uri(@"pack://application:,,,/img/БОШКА-ДЕЙСТВИЕ.png", UriKind.Absolute));
-            lico3 = new BitmapImage(new Uri(@"pack://application:,,,/img/БОШКА-ПОБЕДА.png", UriKind.Absolute));
+            lico = new BitmapImage(new Uri(@"pack://application:,,,/img/Obychnoe-litso.png", UriKind.Absolute));
+            lico1 = new BitmapImage(new Uri(@"pack://application:,,,/img/Vzglyad-vlevo.png", UriKind.Absolute));
+            lico2 = new BitmapImage(new Uri(@"pack://application:,,,/img/Vzglyad-vpravo.png", UriKind.Absolute));
+            lico3 = new BitmapImage(new Uri(@"pack://application:,,,/img/Kakoe-to-deystvie.png", UriKind.Absolute));
+            lico4 = new BitmapImage(new Uri(@"pack://application:,,,/img/Pobeda.png", UriKind.Absolute));
+            lico5 = new BitmapImage(new Uri(@"pack://application:,,,/img/proigrysh.png", UriKind.Absolute));
+
             player.Open(new Uri(@"C:\Users\Сергей\Desktop\kursovaya\BcpaTbIй so-per\BcpaTbIй so-per\sound\welcomtotheclub.wav", UriKind.Relative));
             player.MediaEnded += Player_MediaEnded;
             mineplayer.Open(new Uri(@"C:\Users\Сергей\Desktop\kursovaya\BcpaTbIй so-per\BcpaTbIй so-per\sound\waterdrop.wav", UriKind.Relative));
@@ -84,7 +89,7 @@ namespace BcpaTbIй_so_per
             ImageBrush ib = new ImageBrush();
             ib.ImageSource = null;
             wiw = new wiw1();
-            
+            pi.BorderThickness = new Thickness(2);
             minechanger.BorderThickness = new Thickness(2);
             for (int i = 0; i < 100; i++)
             {
@@ -107,7 +112,13 @@ namespace BcpaTbIй_so_per
             }
             Tumer = new System.Windows.Threading.DispatcherTimer();
             Tumer.Tick += new EventHandler(dispatcherTumer_Tick);
-            Tumer.Interval = new TimeSpan(0, 0, 0,0,220);
+            Tumer.Interval = new TimeSpan(0, 0, 0, 0, 350);
+
+            Trimer = new System.Windows.Threading.DispatcherTimer();
+            Trimer.Tick += new EventHandler(dispatcherTrimer_Tick);
+            Trimer.Interval = new TimeSpan(0, 0, 0, 0, 400);
+            spravka.BorderThickness = new Thickness(2);
+            Trimer.Start();
         }
         private void But_Click(object sender, RoutedEventArgs e)
         {
@@ -142,13 +153,14 @@ namespace BcpaTbIй_so_per
 
                                 if (logic.celler(tag % 10, tag / 10) == 0)
                                 {
+                                    Trimer.Stop();
                                     player.Play();
                                     suker.Content = Convert.ToString(score);
                                     logic.otkrivashka(tag % 10, tag / 10);
                                     Button[] but1 = new Button[gridyc.Children.Count];
                                     gridyc.Children.CopyTo(but1, 0);
                                     ImageBrush ib1 = new ImageBrush();
-                                    ib1.ImageSource = lico2;
+                                    ib1.ImageSource = lico3;
                                     umnozigifashizm.Background = ib1;
                                     Tumer.Start();
 
@@ -183,8 +195,9 @@ namespace BcpaTbIй_so_per
                                 else
                                 if (logic.celler(tag % 10, tag / 10) > 0 && logic.celler(tag % 10, tag / 10) < 9)
                                 {
+                                    Trimer.Stop();
                                     ImageBrush ib1 = new ImageBrush();
-                                    ib1.ImageSource = lico2;
+                                    ib1.ImageSource = lico3;
                                     umnozigifashizm.Background = ib1;
                                     Tumer.Start();
                                     player.Play();
@@ -203,8 +216,9 @@ namespace BcpaTbIй_so_per
                             {
                                 if (logic.celler(tag % 10, tag / 10) == 0)
                                 {
+                                    Trimer.Stop();
                                     ImageBrush ib1 = new ImageBrush();
-                                    ib1.ImageSource = lico2;
+                                    ib1.ImageSource = lico3;
                                     umnozigifashizm.Background = ib1;
                                     Tumer.Start();
                                     player.Play();
@@ -242,8 +256,9 @@ namespace BcpaTbIй_so_per
                                 else
                                 if (logic.celler(tag % 10, tag / 10) > 0 && logic.celler(tag % 10, tag / 10) != 9)
                                 {
+                                    Trimer.Stop();
                                     ImageBrush ib1 = new ImageBrush();
-                                    ib1.ImageSource = lico2;
+                                    ib1.ImageSource = lico3;
                                     umnozigifashizm.Background = ib1;
                                     Tumer.Start();
                                     player.Play();
@@ -257,8 +272,9 @@ namespace BcpaTbIй_so_per
                                 else
                                 if (logic.celler(tag % 10, tag / 10) == 9)
                                 {
+                                    Trimer.Stop();
                                     ImageBrush ib1 = new ImageBrush();
-                                    ib1.ImageSource = lico1;
+                                    ib1.ImageSource = lico5;
                                     umnozigifashizm.Background = ib1;
                                     Button[] mine = new Button[gridyc.Children.Count];
                                     gridyc.Children.CopyTo(mine, 0);
@@ -303,16 +319,16 @@ namespace BcpaTbIй_so_per
                 {
                     if (perviynah == false)
                     {
-                        if(((Button)sender).Background != Brushes.LightCyan)
+                        ImageBrush ib = new ImageBrush();
+                        ib.ImageSource = minecheck;
+                        if (((Button)sender).Background != ib)
                         { 
-                        magic.Play();
-                        int tag = Convert.ToInt32(((Button)sender).Tag);
-                        if (logic.celler(tag % 10, tag / 10) >= 0)
-                        {
+                            magic.Play();
+                            int tag = Convert.ToInt32(((Button)sender).Tag);
+                            if (logic.celler(tag % 10, tag / 10) >= 0)
+                            {
                             if (flagcount != 0)
                             {
-                                ImageBrush ib = new ImageBrush();
-                                ib.ImageSource = minecheck;
                                 ((Button)sender).Background = ib;
                                 if (logic.celler(tag % 10, tag / 10) == 9)
                                 {
@@ -322,48 +338,68 @@ namespace BcpaTbIй_so_per
                                 }
                                 else
                                 {
-                                    logic.umnozhator(tag % 10, tag / 10);
+                                        if (logic.gr[tag % 10, tag / 10] == 0)
+                                        {
+                                            logic.gr[tag % 10, tag / 10] = -1000;
+                                        }
+                                        else
+                                        {
+                                            logic.umnozhator(tag % 10, tag / 10);
+                                        }
                                     flagcount -= 1;
                                 }
                             }
                         }
                         else
                         {
-                            ((Button)sender).Background = Brushes.LightBlue;
-                            if (logic.celler(tag % 10, tag / 10) == -9)
-                            {
-                                logic.umnozhator(tag % 10, tag / 10);
-                                winer--;
-                                flagcount += 1;
+                           if (flagcount < allah)
+                           {
+                                    ((Button)sender).Background = Brushes.LightBlue;
+                                    if (logic.celler(tag % 10, tag / 10) == -9)
+                                    {
+                                        logic.umnozhator(tag % 10, tag / 10);
+                                        winer--;
+                                        flagcount += 1;
 
-                            }
-                            else
-                            {
-                                logic.umnozhator(tag % 10, tag / 10);
-                                flagcount += 1;
-                            }
+                                    }
+                                    else
+                                    {
+                                        if (logic.gr[tag % 10, tag / 10] == -1000)
+                                        {
+                                            logic.gr[tag % 10, tag / 10] = 0;
+                                        }
+                                        else
+                                        {
+                                            logic.umnozhator(tag % 10, tag / 10);
+                                        }
+                                    flagcount += 1;
+                                    }
+                           }
                         }
-                        if (winer == allah)
-                        {
-                            Timer.Stop();
-                            ImageBrush ib2 = new ImageBrush();
-                            ib2.ImageSource = lico3;
-                            umnozigifashizm.Background = ib2;
-                            scores scor = new scores(score, (min * 60) + sec);
-                            scor.Owner = this;
-                            scor.Show();
-                            gridыч = false;
-                            boomer.IsReadOnly = false;
-                            startbutton = false;
-                            umnozigifashizm.Foreground = Brushes.White;
-                            umnozigifashizm.IsEnabled = true;
-                            boomer.IsReadOnly = false;
-                            startbutton = false;
-                            umnozigifashizm.Foreground = Brushes.White;
-                            gridыч = false;
+                        
+                        }
+                        
                         }
                     }
-                    }
+                if (winer == allah)
+                {
+                    Trimer.Stop();
+                    Timer.Stop();
+                    ImageBrush ib2 = new ImageBrush();
+                    ib2.ImageSource = lico4;
+                    umnozigifashizm.Background = ib2;
+                    scores scor = new scores(score, (min * 60) + sec);
+                    scor.Owner = this;
+                    scor.Show();
+                    gridыч = false;
+                    boomer.IsReadOnly = false;
+                    startbutton = false;
+                    umnozigifashizm.Foreground = Brushes.White;
+                    umnozigifashizm.IsEnabled = true;
+                    boomer.IsReadOnly = false;
+                    startbutton = false;
+                    umnozigifashizm.Foreground = Brushes.White;
+                    gridыч = false;
                 }
             }
 
@@ -375,8 +411,10 @@ namespace BcpaTbIй_so_per
             
             if (startbutton == false)
             {
+                Trimer.Stop();
                 ImageBrush ib1 = new ImageBrush();
-                ib1.ImageSource = lico2;
+
+                ib1.ImageSource = lico3;
                 umnozigifashizm.Background = ib1;
                 Tumer.Start();
                 try
@@ -611,6 +649,8 @@ namespace BcpaTbIй_so_per
             pipecc++;
             if(pipecc == 1)
             {
+                licoint = 0;
+                Trimer.Start();
                 umnozigifashizm.Background = ib;
                 Tumer.Stop();
                 pipecc = 0;
@@ -628,7 +668,7 @@ namespace BcpaTbIй_so_per
             MessageBox.Show("1.Введите количество мин \n2.Нажмите на лицо.\n3.Игра начинается только тогда, когда выбрана бомба.\n4.Нажми на любую клетку, чтобы начать игру.\n5.Чтобы победить, поставь флажки на все мины.\n6.Чтобы ставить флажки, нажмите на бомбу.\n7.Чтобы выбирать клетки, нажми на флажок.\n8.Удачи лох.\nС уважением, LеИinСКie DICKа_РИ(-87)", "Справка");
         }
 
-        bool sss = false;
+        bool sss = true;
 
         private void Pi_Click(object sender, RoutedEventArgs e)
         {
@@ -654,6 +694,66 @@ namespace BcpaTbIй_so_per
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             wiw.Close();
+        }
+
+        private void Pi_MouseEnter(object sender, MouseEventArgs e)
+        {
+            pi.BorderBrush = Brushes.Red;
+            pi.BorderThickness = new Thickness(2);
+        }
+
+        private void Pi_MouseLeave(object sender, MouseEventArgs e)
+        {
+            pi.BorderBrush = null;
+            pi.BorderThickness = new Thickness(2);
+        }
+
+        private void Spravka_MouseEnter(object sender, MouseEventArgs e)
+        {
+
+            spravka.BorderBrush = Brushes.Red;
+            spravka.BorderThickness = new Thickness(2);
+        }
+
+        private void Spravka_MouseLeave(object sender, MouseEventArgs e)
+        {
+            spravka.BorderBrush = null;
+            spravka.BorderThickness = new Thickness(2);
+        }
+
+        private void dispatcherTrimer_Tick(object sender, EventArgs e)
+        {
+            ImageBrush ib = new ImageBrush();
+            ib.ImageSource = lico;
+            ImageBrush ib1 = new ImageBrush();
+            ib1.ImageSource = lico1;
+            ImageBrush ib2 = new ImageBrush();
+            ib2.ImageSource = lico2;
+            licoint++;
+            switch (licoint)
+            {
+                case 1:
+                    {
+                        umnozigifashizm.Background = ib;
+                        break;
+                    }
+                case 2:
+                    {
+                        umnozigifashizm.Background = ib1;
+                        break;
+                    }
+                case 3:
+                    {
+                        umnozigifashizm.Background = ib;
+                        break;
+                    }
+                case 4:
+                    {
+                        umnozigifashizm.Background = ib2;
+                        licoint = 0;
+                        break;
+                    }
+            }
         }
     }
 }

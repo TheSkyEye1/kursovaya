@@ -21,8 +21,8 @@ namespace BcpaTbIй_so_per
     public partial class scores : Window
     {
         bool firsttime = true;
-        string db_name = @"C:\Users\Сергей\Desktop\kursovaya\BcpaTbIй so-per\hightscores.db";
         bool ooooo = false;
+        BitmapImage minecheck;
         public class data
         {
             public int uid { get; set; }
@@ -40,14 +40,16 @@ namespace BcpaTbIй_so_per
         public scores(int score, int time)
         {
             InitializeComponent();
+            minecheck = new BitmapImage(new Uri(@"pack://application:,,,/img/knopka-vykl.png", UriKind.Absolute));
             scures = score;
             tumes = time;
             win_name.MaxLength = 11;
             somegrid.IsReadOnly = true;
-
+            игеук.IsEnabled = false;
 
             somegrid.ItemsSource = sql1.output();
             somegrid.Items.Refresh();
+           
 
         }
 
@@ -102,6 +104,27 @@ namespace BcpaTbIй_so_per
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        private void Button_MouseEnter(object sender, MouseEventArgs e)
+        {
+            
+
+            but.Height = 80;
+            but.Width = 80;
+            ImageBrush ib = new ImageBrush();
+            ib.ImageSource = minecheck;
+            but.Background = ib;
+        }
+
+        private void Button_MouseLeave(object sender, MouseEventArgs e)
+        {
+            
+            but.Height = 60;
+            but.Width = 60;
+            ImageBrush ib = new ImageBrush();
+            ib.ImageSource = minecheck;
+            but.Background = ib;
         }
     }
 }

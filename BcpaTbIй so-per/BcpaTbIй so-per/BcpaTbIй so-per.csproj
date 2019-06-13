@@ -78,9 +78,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="extremebanner.xaml.cs">
-      <DependentUpon>extremebanner.xaml</DependentUpon>
-    </Compile>
     <Compile Include="imsucc.xaml.cs">
       <DependentUpon>imsucc.xaml</DependentUpon>
     </Compile>
@@ -97,10 +94,6 @@
     <Compile Include="wiw1.xaml.cs">
       <DependentUpon>wiw1.xaml</DependentUpon>
     </Compile>
-    <Page Include="extremebanner.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="imsucc.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -165,9 +158,6 @@
     <Resource Include="img\water.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="img\zaschita-ot-govna.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="img\FLAG-MNE-V-ZAD.png" />
   </ItemGroup>
   <ItemGroup>
@@ -187,9 +177,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="img\ZADNIK_DLYa_TABLITsY_2_0.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="img\zaschita-ot-govna228.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="img\Podryv-zhopy-minoy-dlya-Sergo %281%29.ico" />
@@ -225,13 +212,16 @@
     </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="img\БОШКА-ДЕЙСТВИЕ.png" />
-    <Resource Include="img\БОШКА-ПРОИГРЫШ.png" />
-    <Resource Include="img\БОШКА.png" />
-  </ItemGroup>
-  <ItemGroup>
+    <Resource Include="img\Vzglyad-vlevo.png" />
+    <Resource Include="img\Vzglyad-vpravo.png" />
+    <Resource Include="img\Kakoe-to-deystvie.png" />
+    <Resource Include="img\Obychnoe-litso.png" />
+    <Resource Include="img\Pobeda.png" />
+    <Resource Include="img\proigrysh.png" />
+    <Resource Include="img\knopka-vykl.png" />
+    <Resource Include="img\kubok.png" />
+    <Resource Include="img\ffffffffffffffon.jpg" />
     <Content Include="sound\tromb.wav" />
-    <Resource Include="img\БОШКА-ПОБЕДА.png" />
     <Content Include="sound\magic %282%29.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
