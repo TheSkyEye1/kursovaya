@@ -309,55 +309,58 @@ namespace BcpaTbIй_so_per
                 try
                 {
                     if (Convert.ToInt32(boomer.Text) > 0 && Convert.ToInt32(boomer.Text) < 71)
-                    { 
-                        allah = Convert.ToInt32(boomer.Text);
-                    labradoryc.Content = "     0:00";
-                    sec = 0;
-                    min = 0;
-                    gridyc.Children.Clear();
-                    gridyc.IsEnabled = true;
-                    gridyc.Rows = 10;
-                    gridyc.Columns = 10;
-                    gridyc.Margin = new Thickness(0, 0, 10, 6);
-                    logic.sozdavator(10);
-                    suker.Content = "      0";
-                    score = 0;
-                    for (int i = 0; i < 100; i++)
                     {
-                        Button but = new Button();
-                        but.Tag = i;
-                        but.Width = 50;
-                        but.Height = 50;
-                        but.Content = ' ';
-                        but.Margin = new Thickness(2);
-                        but.Click += But_Click;
-                        but.Background = Brushes.LightBlue;
-                        but.MouseEnter += But_MouseEnter;
-                        but.MouseLeave += But_MouseLeave;
-                        but.BorderBrush = Brushes.Blue;
-                        but.BorderThickness = new Thickness(2);
-                        but.FontFamily = new FontFamily("Consolas");
-                        gridyc.Children.Add(but);
+                        allah = Convert.ToInt32(boomer.Text);
+                        labradoryc.Content = "     0:00";
+                        sec = 0;
+                        min = 0;
+                        gridyc.Children.Clear();
+                        gridyc.IsEnabled = true;
+                        gridyc.Rows = 10;
+                        gridyc.Columns = 10;
+                        gridyc.Margin = new Thickness(0, 0, 10, 6);
+                        logic.sozdavator(10);
+                        suker.Content = "      0";
+                        score = 0;
+                        for (int i = 0; i < 100; i++)
+                        {
+                            Button but = new Button();
+                            but.Tag = i;
+                            but.Width = 50;
+                            but.Height = 50;
+                            but.Content = ' ';
+                            but.Margin = new Thickness(2);
+                            but.Click += But_Click;
+                            but.Background = Brushes.LightBlue;
+                            but.MouseEnter += But_MouseEnter;
+                            but.MouseLeave += But_MouseLeave;
+                            but.BorderBrush = Brushes.Blue;
+                            but.BorderThickness = new Thickness(2);
+                            but.FontFamily = new FontFamily("Consolas");
+                            gridyc.Children.Add(but);
 
 
+                        }
+                        perviynah = true;
+                        dostup = true;
+                        umnozigifashizm.IsEnabled = false;
+                        Timer = new System.Windows.Threading.DispatcherTimer();
+                        Timer.Tick += new EventHandler(dispatcherTimer_Tick);
+                        Timer.Interval = new TimeSpan(0, 0, 1);
+                        suker.Content = " 00000";
+                        labradoryc.Content = " 00:00";
+                        boomer.IsReadOnly = true;
+                        umnozigifashizm.Foreground = Brushes.Crimson;
+                        startbutton = true;
+                        gridыч = true;
+                        cancheat = false;
+                        cheatopened = false;
                     }
-                    perviynah = true;
-                    dostup = true;
-                    umnozigifashizm.IsEnabled = false;
-                    Timer = new System.Windows.Threading.DispatcherTimer();
-                    Timer.Tick += new EventHandler(dispatcherTimer_Tick);
-                    Timer.Interval = new TimeSpan(0, 0, 1);
-                    }
+                    else
+                        MessageBox.Show("Мин должно быть больше 0 и меньше 71!");
                 }
                 catch { MessageBox.Show("Пиши циферки"); };
-                suker.Content = " 00000";
-                labradoryc.Content = " 00:00";
-                boomer.IsReadOnly = true;
-                umnozigifashizm.Foreground = Brushes.Crimson;
-                startbutton = true;
-                gridыч = true;
-                cancheat = false;
-                cheatopened = false;
+                
             }
         }
 
