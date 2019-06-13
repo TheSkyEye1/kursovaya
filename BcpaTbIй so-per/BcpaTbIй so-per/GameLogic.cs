@@ -57,7 +57,7 @@ namespace BcpaTbIй_so_per
         public void zakladka(int n, int tag)
         {
             if (n < 1) throw new Exception("Маловато мин");
-            if (n >= 71) throw new Exception("Многовато мин");
+            if (n > 70) throw new Exception("Многовато мин");
 
             Random nemayor = new Random();
 

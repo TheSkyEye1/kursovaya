@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BcpaTbIй_so_per"
         mc:Ignorable="d"
-        Title="Im suck at this game" Height="490" Width="450" ResizeMode="NoResize" Icon="img/Podryv-zhopy-minoy-dlya-Sergo (1).ico">
+        Title="Im suck at this game" Height="490" Width="450" ResizeMode="NoResize" Icon="img/Podryv-zhopy-minoy-dlya-Sergo (1).ico" WindowStyle="None">
     <Window.Background>
         <ImageBrush ImageSource="img/EBAT.jpg"/>
     </Window.Background>

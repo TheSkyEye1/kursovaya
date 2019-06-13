@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Media;
 
 namespace BcpaTbIй_so_per
 {
@@ -23,6 +24,10 @@ namespace BcpaTbIй_so_per
         BitmapImage minepng;
         BitmapImage butback;
         BitmapImage minecheck;
+        BitmapImage lico;
+        BitmapImage lico1;
+        BitmapImage lico2;
+        BitmapImage lico3;
         bool perviynah = true;
         GameLogic logic = new GameLogic();
         int allah = 0;
@@ -36,26 +41,50 @@ namespace BcpaTbIй_so_per
         bool startbutton = false;
         bool gridыч = false;
         bool cheatopened = false;
-        public int[,] massivich = new int[10,10];
+        public int[,] massivich = new int[10, 10];
         int cheater;
         bool cancheat = false;
+        int pipecc = 0;
+
+        wiw1 wiw;
+
+        MediaPlayer player = new MediaPlayer();
+        MediaPlayer mineplayer = new MediaPlayer();
+        MediaPlayer magic = new MediaPlayer();
+        MediaPlayer tromb = new MediaPlayer();
 
         System.Windows.Threading.DispatcherTimer Timer;
+        System.Windows.Threading.DispatcherTimer Tumer;
         public MainWindow()
         {
             InitializeComponent();
             minepng = new BitmapImage(new Uri(@"pack://application:,,,/img/Podryv-zhopy-minoy-dlya-Sergo.png", UriKind.Absolute));
             butback = new BitmapImage(new Uri(@"pack://application:,,,/img/zaschita-ot-govna228.png", UriKind.Absolute));
             minecheck = new BitmapImage(new Uri(@"pack://application:,,,/img/FLAG-MNE-V-ZAD.png", UriKind.Absolute));
+
+            lico = new BitmapImage(new Uri(@"pack://application:,,,/img/БОШКА.png", UriKind.Absolute));
+            lico1 = new BitmapImage(new Uri(@"pack://application:,,,/img/БОШКА-ПРОИГРЫШ.png", UriKind.Absolute));
+            lico2 = new BitmapImage(new Uri(@"pack://application:,,,/img/БОШКА-ДЕЙСТВИЕ.png", UriKind.Absolute));
+            lico3 = new BitmapImage(new Uri(@"pack://application:,,,/img/БОШКА-ПОБЕДА.png", UriKind.Absolute));
+            player.Open(new Uri(@"C:\Users\Сергей\Desktop\kursovaya\BcpaTbIй so-per\BcpaTbIй so-per\sound\welcomtotheclub.wav", UriKind.Relative));
+            player.MediaEnded += Player_MediaEnded;
+            mineplayer.Open(new Uri(@"C:\Users\Сергей\Desktop\kursovaya\BcpaTbIй so-per\BcpaTbIй so-per\sound\waterdrop.wav", UriKind.Relative));
+            mineplayer.MediaEnded += MinePlayer_MediaEnded;
+            magic.Open(new Uri(@"C:\Users\Сергей\Desktop\kursovaya\BcpaTbIй so-per\BcpaTbIй so-per\sound\magic (2).wav", UriKind.Relative));
+            magic.MediaEnded += Magic_MediaEnded;
+            tromb.Open(new Uri(@"C:\Users\Сергей\Desktop\kursovaya\BcpaTbIй so-per\BcpaTbIй so-per\sound\tromb.wav", UriKind.Relative));
+            tromb.MediaEnded += Tromb_MediaEnded;
             boomer.MaxLength = 2;
             gridyc.Children.Clear();
             gridyc.IsEnabled = true;
             gridyc.Rows = 10;
             gridyc.Columns = 10;
-            gridyc.Margin = new Thickness(0, 0, 10, 6);
+            gridyc.Margin = new Thickness(0,0,10,85);
             logic.sozdavator(10);
             ImageBrush ib = new ImageBrush();
             ib.ImageSource = null;
+            wiw = new wiw1();
+            
             minechanger.BorderThickness = new Thickness(2);
             for (int i = 0; i < 100; i++)
             {
@@ -71,179 +100,212 @@ namespace BcpaTbIй_so_per
                 but.MouseLeave += But_MouseLeave;
                 but.BorderBrush = Brushes.Blue;
                 but.BorderThickness = new Thickness(2);
-                
+
+
                 gridyc.Children.Add(but);
-                
+
             }
+            Tumer = new System.Windows.Threading.DispatcherTimer();
+            Tumer.Tick += new EventHandler(dispatcherTumer_Tick);
+            Tumer.Interval = new TimeSpan(0, 0, 0,0,220);
         }
         private void But_Click(object sender, RoutedEventArgs e)
         {
+            
             if (gridыч == true)
             {
                 if (mineheker == false)
                 {
-                    
-                        if (dostup == true)
+
+                    if (dostup == true)
+                    {
+                        int tag = Convert.ToInt32(((Button)sender).Tag);
+
+                        if (perviynah == true)
                         {
-                            int tag = Convert.ToInt32(((Button)sender).Tag);
-                            
-                            if (perviynah == true)
+
+                            if (logic.celler(tag % 10, tag / 10) < 10)
                             {
-                                if (logic.celler(tag % 10, tag / 10) < 10)
+
+                                logic.zakladka(allah, tag);
+                                for (int i = 0; i < 100; i++)
                                 {
-                                    logic.zakladka(allah, tag);
-                                    for(int i = 0; i<100; i++)
-                                    {
-                                        massivich[i % 10, i / 10] = logic.gr[i % 10, i / 10];
-                                    }
-                                    logic.zapolnyator();
-                                    perviynah = false;
-                                    umnozigifashizm.IsEnabled = false;
-                                    cancheat = true;
-                                    Timer.Start();
-                                    flagcount = allah;
-                                    winer = 0;
-                                    
-                                    if (logic.celler(tag % 10, tag / 10) == 0)
-                                    {
-                                        suker.Content = Convert.ToString(score);
-                                        logic.otkrivashka(tag % 10, tag / 10);
-                                        Button[] but1 = new Button[gridyc.Children.Count];
-                                        gridyc.Children.CopyTo(but1, 0);
-
-                                        for (int i = 0; i < but1.Length; i++)
-                                        {
-                                            int h = Convert.ToInt32((but1[i]).Tag);
-
-                                            if (logic.celler(h % 10, h / 10) >= 10)
-                                            {
-                                                logic.revert(h % 10, h / 10);
-                                                (but1[i]).FontSize = 32;
-                                                if (logic.celler(h % 10, h / 10) == 0)
-                                                {
-
-                                                    (but1[i]).Content = ' ';
-                                                    (but1[i]).Background = null;
-                                                    logic.opened(h % 10, h / 10);
-                                                }
-                                                else
-                                                {
-
-                                                    (but1[i]).Background = Brushes.LightBlue;
-                                                    (but1[i]).Content = logic.celler(h % 10, h / 10);
-                                                    logic.opened(h % 10, h / 10);
-
-                                                }
-                                            }
-
-                                        }
-                                        score += 10 * allah;
-                                    }
-                                    else
-                                    if (logic.celler(tag % 10, tag / 10) > 0 && logic.celler(tag % 10, tag / 10) < 9)
-                                    {
-
-                                        ((Button)sender).Content = logic.celler(tag % 10, tag / 10);
-                                        ((Button)sender).Background = Brushes.LightBlue;
-                                        ((Button)sender).FontSize = 32;
-                                        logic.opened(tag % 10, tag / 10);
-                                        score += 10 * allah;
-                                        
-                                    }
+                                    massivich[i % 10, i / 10] = logic.gr[i % 10, i / 10];
                                 }
-                        }
-                            else
-                            {
-                                if (logic.celler(tag % 10, tag / 10) < 10)
+                                logic.zapolnyator();
+                                perviynah = false;
+                                umnozigifashizm.IsEnabled = false;
+                                cancheat = true;
+                                Timer.Start();
+                                flagcount = allah;
+                                winer = 0;
+
+                                if (logic.celler(tag % 10, tag / 10) == 0)
                                 {
-                                    if (logic.celler(tag % 10, tag / 10) == 0)
+                                    player.Play();
+                                    suker.Content = Convert.ToString(score);
+                                    logic.otkrivashka(tag % 10, tag / 10);
+                                    Button[] but1 = new Button[gridyc.Children.Count];
+                                    gridyc.Children.CopyTo(but1, 0);
+                                    ImageBrush ib1 = new ImageBrush();
+                                    ib1.ImageSource = lico2;
+                                    umnozigifashizm.Background = ib1;
+                                    Tumer.Start();
+
+                                    for (int i = 0; i < but1.Length; i++)
                                     {
-                                        logic.otkrivashka(tag % 10, tag / 10);
-                                        Button[] but1 = new Button[gridyc.Children.Count];
-                                        gridyc.Children.CopyTo(but1, 0);
+                                        int h = Convert.ToInt32((but1[i]).Tag);
 
-                                        for (int i = 0; i < but1.Length; i++)
+                                        if (logic.celler(h % 10, h / 10) >= 10)
                                         {
-                                            int h = Convert.ToInt32((but1[i]).Tag);
-
-                                            if (logic.celler(h % 10, h / 10) >= 10)
+                                            logic.revert(h % 10, h / 10);
+                                            (but1[i]).FontSize = 32;
+                                            if (logic.celler(h % 10, h / 10) == 0)
                                             {
-                                                logic.revert(h % 10, h / 10);
-                                                (but1[i]).FontSize = 32;
-                                                if (logic.celler(h % 10, h / 10) == 0)
-                                                {
-                                                    (but1[i]).Content = ' ';
-                                                    (but1[i]).Background = null;
-                                                    logic.opened(h % 10, h / 10);
 
-                                                }
-                                                else
-                                                {
-                                                    (but1[i]).Background = Brushes.LightBlue;
-                                                    (but1[i]).Content = logic.celler(h % 10, h / 10);
-                                                    logic.opened(h % 10, h / 10);
-
-                                                }
+                                                (but1[i]).Content = ' ';
+                                                (but1[i]).Background = null;
+                                                logic.opened(h % 10, h / 10);
                                             }
-
-                                        }
-                                        score += 10 * allah;
-                                    }
-                                    else
-                                    if (logic.celler(tag % 10, tag / 10) > 0 && logic.celler(tag % 10, tag / 10) != 9)
-                                    {
-                                        ((Button)sender).Content = logic.celler(tag % 10, tag / 10);
-                                        ((Button)sender).Background = Brushes.LightBlue;
-                                        ((Button)sender).FontSize = 32;
-                                        logic.opened(tag % 10, tag / 10);
-                                        score += 10 * allah;
-
-                                    }
-                                    else
-                                    if (logic.celler(tag % 10, tag / 10) == 9)
-                                    {
-                                        Button[] mine = new Button[gridyc.Children.Count];
-                                        gridyc.Children.CopyTo(mine, 0);
-                                        for (int i = 0; i < mine.Length; i++)
-                                        {
-
-                                            int n = Convert.ToInt32((mine[i]).Tag);
-                                            if (logic.celler(n % 10, n / 10) == 9)
+                                            else
                                             {
-                                                ImageBrush ib = new ImageBrush();
-                                                ib.ImageSource = minepng;
-                                                (mine[i]).Background = ib;
+
+                                                (but1[i]).Background = Brushes.LightCyan;
+                                                (but1[i]).Content = logic.celler(h % 10, h / 10);
+                                                logic.opened(h % 10, h / 10);
+
                                             }
                                         }
-                                        Timer.Stop();
-                                        MessageBox.Show("Проигрыш");
-                                        umnozigifashizm.IsEnabled = true;
-                                        boomer.IsReadOnly = false;
-                                        startbutton = false;
-                                        umnozigifashizm.Foreground = Brushes.White;
-                                        gridыч = false;
 
                                     }
+                                    score += 10 * allah;
+                                }
+                                else
+                                if (logic.celler(tag % 10, tag / 10) > 0 && logic.celler(tag % 10, tag / 10) < 9)
+                                {
+                                    ImageBrush ib1 = new ImageBrush();
+                                    ib1.ImageSource = lico2;
+                                    umnozigifashizm.Background = ib1;
+                                    Tumer.Start();
+                                    player.Play();
+                                    ((Button)sender).Content = logic.celler(tag % 10, tag / 10);
+                                    ((Button)sender).Background = Brushes.LightCyan;
+                                    ((Button)sender).FontSize = 32;
+                                    logic.opened(tag % 10, tag / 10);
+                                    score += 10 * allah;
+
                                 }
                             }
-
                         }
-                    
+                        else
+                        {
+                            if (logic.celler(tag % 10, tag / 10) < 10)
+                            {
+                                if (logic.celler(tag % 10, tag / 10) == 0)
+                                {
+                                    ImageBrush ib1 = new ImageBrush();
+                                    ib1.ImageSource = lico2;
+                                    umnozigifashizm.Background = ib1;
+                                    Tumer.Start();
+                                    player.Play();
+                                    logic.otkrivashka(tag % 10, tag / 10);
+                                    Button[] but1 = new Button[gridyc.Children.Count];
+                                    gridyc.Children.CopyTo(but1, 0);
+
+                                    for (int i = 0; i < but1.Length; i++)
+                                    {
+                                        int h = Convert.ToInt32((but1[i]).Tag);
+
+                                        if (logic.celler(h % 10, h / 10) >= 10)
+                                        {
+                                            logic.revert(h % 10, h / 10);
+                                            (but1[i]).FontSize = 32;
+                                            if (logic.celler(h % 10, h / 10) == 0)
+                                            {
+                                                (but1[i]).Content = ' ';
+                                                (but1[i]).Background = null;
+                                                logic.opened(h % 10, h / 10);
+
+                                            }
+                                            else
+                                            {
+                                                (but1[i]).Background = Brushes.LightCyan;
+                                                (but1[i]).Content = logic.celler(h % 10, h / 10);
+                                                logic.opened(h % 10, h / 10);
+
+                                            }
+                                        }
+
+                                    }
+                                    score += 10 * allah;
+                                }
+                                else
+                                if (logic.celler(tag % 10, tag / 10) > 0 && logic.celler(tag % 10, tag / 10) != 9)
+                                {
+                                    ImageBrush ib1 = new ImageBrush();
+                                    ib1.ImageSource = lico2;
+                                    umnozigifashizm.Background = ib1;
+                                    Tumer.Start();
+                                    player.Play();
+                                    ((Button)sender).Content = logic.celler(tag % 10, tag / 10);
+                                    ((Button)sender).Background = Brushes.LightCyan;
+                                    ((Button)sender).FontSize = 32;
+                                    logic.opened(tag % 10, tag / 10);
+                                    score += 10 * allah;
+
+                                }
+                                else
+                                if (logic.celler(tag % 10, tag / 10) == 9)
+                                {
+                                    ImageBrush ib1 = new ImageBrush();
+                                    ib1.ImageSource = lico1;
+                                    umnozigifashizm.Background = ib1;
+                                    Button[] mine = new Button[gridyc.Children.Count];
+                                    gridyc.Children.CopyTo(mine, 0);
+                                    for (int i = 0; i < mine.Length; i++)
+                                    {
+
+                                        int n = Convert.ToInt32((mine[i]).Tag);
+                                        if (logic.celler(n % 10, n / 10) == 9)
+                                        {
+                                            ImageBrush ib = new ImageBrush();
+                                            ib.ImageSource = minepng;
+                                            (mine[i]).Background = ib;
+                                        }
+                                    }
+                                    mineplayer.Play();
+                                    Timer.Stop();
+                                    MessageBox.Show("С подливой!", "Проиграл");
+                                    umnozigifashizm.IsEnabled = true;
+                                    boomer.IsReadOnly = false;
+                                    startbutton = false;
+                                    umnozigifashizm.Foreground = Brushes.White;
+                                    gridыч = false;
+
+                                }
+                            }
+                        }
+
+                    }
+
                     if (score < 100)
                         suker.Content = " 000" + Convert.ToString(score);
                     else
                     if (score < 1000)
                         suker.Content = " 00" + Convert.ToString(score);
                     else
-                    if(score < 10000) 
+                    if (score < 10000)
                         suker.Content = " 0" + Convert.ToString(score);
                     else
-                        suker.Content = Convert.ToString(score);
+                        suker.Content = " " + Convert.ToString(score);
                 }
                 else
                 {
                     if (perviynah == false)
                     {
+                        if(((Button)sender).Background != Brushes.LightCyan)
+                        { 
+                        magic.Play();
                         int tag = Convert.ToInt32(((Button)sender).Tag);
                         if (logic.celler(tag % 10, tag / 10) >= 0)
                         {
@@ -284,28 +346,39 @@ namespace BcpaTbIй_so_per
                         if (winer == allah)
                         {
                             Timer.Stop();
-
+                            ImageBrush ib2 = new ImageBrush();
+                            ib2.ImageSource = lico3;
+                            umnozigifashizm.Background = ib2;
                             scores scor = new scores(score, (min * 60) + sec);
                             scor.Owner = this;
                             scor.Show();
                             gridыч = false;
+                            boomer.IsReadOnly = false;
+                            startbutton = false;
+                            umnozigifashizm.Foreground = Brushes.White;
                             umnozigifashizm.IsEnabled = true;
                             boomer.IsReadOnly = false;
                             startbutton = false;
                             umnozigifashizm.Foreground = Brushes.White;
+                            gridыч = false;
                         }
                     }
+                    }
                 }
-                
             }
-            
+
 
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            
             if (startbutton == false)
             {
+                ImageBrush ib1 = new ImageBrush();
+                ib1.ImageSource = lico2;
+                umnozigifashizm.Background = ib1;
+                Tumer.Start();
                 try
                 {
                     if (Convert.ToInt32(boomer.Text) > 0 && Convert.ToInt32(boomer.Text) < 71)
@@ -318,7 +391,7 @@ namespace BcpaTbIй_so_per
                         gridyc.IsEnabled = true;
                         gridyc.Rows = 10;
                         gridyc.Columns = 10;
-                        gridyc.Margin = new Thickness(0, 0, 10, 6);
+                        gridyc.Margin = new Thickness(0, 0, 10, 85);
                         logic.sozdavator(10);
                         suker.Content = "      0";
                         score = 0;
@@ -360,7 +433,7 @@ namespace BcpaTbIй_so_per
                         MessageBox.Show("Мин должно быть больше 0 и меньше 71!");
                 }
                 catch { MessageBox.Show("Пиши циферки"); };
-                
+
             }
         }
 
@@ -513,6 +586,74 @@ namespace BcpaTbIй_so_per
                     cheater = 0;
             }
         }
+        private void Player_MediaEnded(object sender, EventArgs e)
+        {
+            player.Stop();
+
+        }
+
+        private void MinePlayer_MediaEnded(object sender, EventArgs e)
+        {
+            mineplayer.Stop();
+            tromb.Play();
+
+        }
+        private void Magic_MediaEnded(object sender, EventArgs e)
+        {
+            magic.Stop();
+
+        }
+
+        private void dispatcherTumer_Tick(object sender, EventArgs e)
+        {
+            ImageBrush ib = new ImageBrush();
+            ib.ImageSource = lico;
+            pipecc++;
+            if(pipecc == 1)
+            {
+                umnozigifashizm.Background = ib;
+                Tumer.Stop();
+                pipecc = 0;
+            }
+        }
+
+        private void Tromb_MediaEnded(object sender, EventArgs e)
+        {
+            tromb.Stop();
+
+        }
+
+        private void Spravka_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("1.Введите количество мин \n2.Нажмите на лицо.\n3.Игра начинается только тогда, когда выбрана бомба.\n4.Нажми на любую клетку, чтобы начать игру.\n5.Чтобы победить, поставь флажки на все мины.\n6.Чтобы ставить флажки, нажмите на бомбу.\n7.Чтобы выбирать клетки, нажми на флажок.\n8.Удачи лох.\nС уважением, LеИinСКie DICKа_РИ(-87)", "Справка");
+        }
+
+        bool sss = false;
+
+        private void Pi_Click(object sender, RoutedEventArgs e)
+        {
+            wiw.Owner = this;
+
+            if (sss==true)
+            {
+                sss = false;
+                wiw.Show();
+                
+
+            }
+            else
+            if (sss==false)
+            {
+                sss = true;
+                wiw.Hide();
+                
+                
+            }
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            wiw.Close();
+        }
     }
 }
-

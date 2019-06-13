@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BcpaTbIй_so_per"
         mc:Ignorable="d"
-        Title="scores" Height="340" Width="420" Icon="img/Podryv-zhopy-minoy-dlya-Sergo (1).ico" ResizeMode="NoResize">
+        Title="scores" Height="340" Width="420" Icon="img/Podryv-zhopy-minoy-dlya-Sergo (1).ico" ResizeMode="NoResize" WindowStyle="None" WindowStartupLocation="CenterOwner">
     <Window.Background>
         <ImageBrush ImageSource="img/123 (1).jpg"/>
     </Window.Background>
@@ -34,7 +34,7 @@
         </Style>
     </Window.Resources>
     <Grid>
-        <DataGrid x:Name="somegrid" HorizontalAlignment="Left" Height="224" Margin="13,60,0,0" VerticalAlignment="Top" Width="375" BorderBrush="{x:Null}" Background="{x:Null}" RenderTransformOrigin="0.5,0.5" Cursor="Cross">
+        <DataGrid x:Name="somegrid" HorizontalAlignment="Left" Height="249" Margin="17,67,0,0" VerticalAlignment="Top" Width="380" BorderBrush="{x:Null}" Background="{x:Null}" RenderTransformOrigin="0.5,0.5" Cursor="Cross">
             <DataGrid.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -44,16 +44,21 @@
                 </TransformGroup>
             </DataGrid.RenderTransform>
         </DataGrid>
-        <Button x:Name="qqq" Content="Принять" HorizontalAlignment="Left" Margin="307,6,0,0" VerticalAlignment="Top" Width="95" Height="34" Click="Button_Click" BorderBrush="{x:Null}" FontFamily="Capture it(RUS BY LYAJKA)" Foreground="White" FontSize="16" MouseEnter="Qqq_MouseEnter" MouseLeave="Qqq_MouseLeave" Cursor="Hand">
+        <Button x:Name="qqq" Content="Принять" HorizontalAlignment="Left" Margin="315,10,0,0" VerticalAlignment="Top" Width="95" Height="34" Click="Button_Click" BorderBrush="{x:Null}" FontFamily="Capture it(RUS BY LYAJKA)" Foreground="White" FontSize="16" MouseEnter="Qqq_MouseEnter" MouseLeave="Qqq_MouseLeave" Cursor="Hand">
             <Button.Background>
                 <ImageBrush ImageSource="img/KNOPKA_2_0.jpg"/>
             </Button.Background>
         </Button>
-        <TextBox x:Name="win_name" HorizontalAlignment="Left" Height="34" Margin="10,6,0,0" TextWrapping="Wrap" Text="Впишите Имя" VerticalAlignment="Top" Width="160" BorderBrush="{x:Null}" FontSize="22" TextAlignment="Center" SelectionBrush="White" Foreground="White" FontFamily="Consolas" MouseEnter="Win_name_MouseEnter" Cursor="Hand">
+        <TextBox x:Name="win_name" HorizontalAlignment="Left" Height="34" Margin="10,10,0,0" TextWrapping="Wrap" Text="Впишите Имя " VerticalAlignment="Top" Width="160" BorderBrush="{x:Null}" FontSize="22" TextAlignment="Center" SelectionBrush="White" Foreground="White" FontFamily="Consolas" MouseEnter="Win_name_MouseEnter" Cursor="Hand" TextChanged="Win_name_TextChanged">
             <TextBox.Background>
                 <ImageBrush ImageSource="img/KNOPKA_2_0.jpg"/>
             </TextBox.Background>
         </TextBox>
+        <Button Content="Close" HorizontalAlignment="Left" Height="34" Margin="234,10,0,0" VerticalAlignment="Top" Width="40" BorderBrush="{x:Null}" Click="Button_Click_1">
+            <Button.Background>
+                <ImageBrush ImageSource="img/ZADNIK_DLYa_TABLITsY_2_0.jpg"/>
+            </Button.Background>
+        </Button>
 
     </Grid>
 </Window>

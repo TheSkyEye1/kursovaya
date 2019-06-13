@@ -22,7 +22,7 @@ namespace BcpaTbIй_so_per
     {
         bool firsttime = true;
         string db_name = @"C:\Users\Сергей\Desktop\kursovaya\BcpaTbIй so-per\hightscores.db";
-
+        bool ooooo = false;
         public class data
         {
             public int uid { get; set; }
@@ -32,7 +32,7 @@ namespace BcpaTbIй_so_per
         }
         List<data> info = new List<data>();
 
-
+        sql sql1 = new sql();
 
 
         public int scures = 0;
@@ -45,75 +45,21 @@ namespace BcpaTbIй_so_per
             win_name.MaxLength = 11;
             somegrid.IsReadOnly = true;
 
-            shower();
 
-        }
-
-        public void shower()
-        {
-            SQLiteConnection m_dbConnection;
-            m_dbConnection = new SQLiteConnection("Data Source= " + db_name + ";Version=3;");
-            m_dbConnection.Open();
-            string sql = "SELECT * FROM full ORDER BY scores DESC";
-            SQLiteCommand command = new SQLiteCommand(sql, m_dbConnection);
-            SQLiteDataReader reader = command.ExecuteReader();
-            while (reader.Read())
-            {
-                data st = new data
-                {
-                    name = reader["name"].ToString(),
-                    time = int.Parse(reader["time"].ToString()),
-                    highscore = int.Parse(reader["scores"].ToString()),
-                    uid = int.Parse(reader["uid"].ToString())
-                };
-                info.Add(st);
-
-            }
-            somegrid.ItemsSource = info;
+            somegrid.ItemsSource = sql1.output();
             somegrid.Items.Refresh();
-            m_dbConnection.Close();
+
         }
+
+   
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             qqq.IsEnabled = false;
-            bool make_add = true;
-            SQLiteConnection m_dbConnection;
-            m_dbConnection = new SQLiteConnection("Data Source= " + db_name + ";Version=3;");
-            m_dbConnection.Open();
-            string sql = "select name from full";
-            SQLiteCommand command1 = new SQLiteCommand(sql, m_dbConnection);
-            SQLiteDataReader reader = command1.ExecuteReader();
-            while (reader.Read())
-            {
-                if (reader["name"].ToString() == win_name.Text)
-                {
-                    extremebanner bane = new extremebanner(win_name.Text);
-                    bane.Owner = this;
-                    if (bane.ShowDialog() == true)
-                    {
-                        sql = "UPDATE full SET scores = " + scures + " WHERE name = '" + win_name.Text + "'; " + " UPDATE full SET time = " + tumes + " WHERE name = '" + win_name.Text + "'";
-                        command1 = new SQLiteCommand(sql, m_dbConnection);
-                        command1.ExecuteNonQuery();
-                        make_add = false;
-                    }
-                    // иначе оставляем результат из таблицы
-                }
-            }
-
-
-            if (make_add == true)
-            {
-                SQLiteCommand command = new SQLiteCommand();
-                sql = "INSERT INTO  full ( name, scores, time ) VALUES (" + "'" + win_name.Text + "'" + "," + scures + "," + tumes + ")";
-                command = new SQLiteCommand(sql, m_dbConnection);
-                command.ExecuteNonQuery();
-            }
-
-
-            m_dbConnection.Close();
-            info.Clear();
-            shower();
+            sql1.input(scures, tumes, win_name.Text);
+            somegrid.ItemsSource = sql1.output();
+            somegrid.Items.Refresh();
+            ooooo = true;
         }
 
         private void Win_name_MouseEnter(object sender, MouseEventArgs e)
@@ -133,6 +79,29 @@ namespace BcpaTbIй_so_per
         private void Qqq_MouseLeave(object sender, MouseEventArgs e)
         {
             qqq.Foreground = Brushes.White;
+        }
+
+        private void Win_name_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (win_name.Text == "" || win_name.Text == "Впишите Имя ")
+                qqq.IsEnabled = false;
+            else
+            {
+                if (ooooo == true)
+                {
+                    qqq.IsEnabled = false;
+                }
+                else
+                {
+                    qqq.IsEnabled = true;
+                }
+            }
+                
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -12,5 +12,7 @@
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("nunit3.testadapter.pdb")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("nunit.engine.dll")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("nunit.engine.api.dll")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("sound/tromb.wav")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("sound/magic%20(2).wav")]
 
 
