@@ -10,7 +10,7 @@ namespace BcpaTbIй_so_per
 {
     class sql
     {
-        string db_name = @"C:\Users\Сергей\Desktop\kursovaya\BcpaTbIй so-per\hightscores.db";
+        string db_name = @"hightscores.db";
         public class data
         {
             public int uid { get; set; }
@@ -19,7 +19,7 @@ namespace BcpaTbIй_so_per
             public int highscore { get; set; }
         }
         List<data> spisok = new List<data>();
-        List<data> info = new List<data>();
+      public  List<data> info = new List<data>();
         public int tumes = 0;
 
         public List<data> output()
@@ -28,7 +28,7 @@ namespace BcpaTbIй_so_per
             SQLiteConnection m_dbConnection;
             m_dbConnection = new SQLiteConnection("Data Source= " + db_name + ";Version=3;");
             m_dbConnection.Open();
-            string sql = "SELECT * FROM full ORDER BY time DESC";
+            string sql = "SELECT * FROM full ORDER BY scores DESC";
             SQLiteCommand command = new SQLiteCommand(sql, m_dbConnection);
             SQLiteDataReader reader = command.ExecuteReader();
             while (reader.Read())

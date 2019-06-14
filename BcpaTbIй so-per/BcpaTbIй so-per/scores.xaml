@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BcpaTbIй_so_per"
         mc:Ignorable="d"
-        Title="scores" Height="750" Width="700" Icon="img/Podryv-zhopy-minoy-dlya-Sergo (1).ico" ResizeMode="NoResize" WindowStyle="None" WindowStartupLocation="CenterOwner">
+        Title="scores" Height="750" Width="700" Icon="img/Podryv-zhopy-minoy-dlya-Sergo (1).ico" ResizeMode="NoResize" WindowStyle="None" WindowStartupLocation="CenterOwner" Closing="Window_Closing">
     <Window.Background>
         <ImageBrush ImageSource="img/123 (1).jpg"/>
     </Window.Background>

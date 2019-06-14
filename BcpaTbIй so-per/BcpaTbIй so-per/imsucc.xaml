@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BcpaTbIй_so_per"
         mc:Ignorable="d"
-        Title="Im suck at this game" Height="490" Width="450" ResizeMode="NoResize" Icon="img/Podryv-zhopy-minoy-dlya-Sergo (1).ico" WindowStyle="ThreeDBorderWindow" WindowStartupLocation="Manual">
+        Title="Im suck at this game" Height="494" Width="450" ResizeMode="NoResize" Icon="img/Podryv-zhopy-minoy-dlya-Sergo (1).ico" WindowStyle="ThreeDBorderWindow" WindowStartupLocation="Manual">
     <Window.Background>
         <ImageBrush ImageSource="img/EBAT.jpg"/>
     </Window.Background>
@@ -68,7 +68,7 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <Label Content="Одобрено assоциацией обманщиков™" HorizontalAlignment="Left" Height="28" Margin="4,467,0,-5" VerticalAlignment="Top" Width="186" FontSize="8" RenderTransformOrigin="0.5,0.5" FontFamily="Capture it(RUS BY LYAJKA)" Background="{x:Null}" Foreground="Black">
+        <Label Content="Одобрено assоциацией обманщиков™" HorizontalAlignment="Left" Height="19" Margin="8,428,0,0" VerticalAlignment="Top" Width="186" FontSize="8" RenderTransformOrigin="0.5,0.5" FontFamily="Capture it(RUS BY LYAJKA)" Background="{x:Null}" Foreground="Black">
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -78,7 +78,7 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <Label Content="Одобрено assоциацией обманщиков™" HorizontalAlignment="Left" Height="28" Margin="3,466,0,-4" VerticalAlignment="Top" Width="187" FontSize="8" RenderTransformOrigin="0.5,0.5" FontFamily="Capture it(RUS BY LYAJKA)" Background="{x:Null}" Foreground="White">
+        <Label Content="Одобрено assоциацией обманщиков™" HorizontalAlignment="Left" Height="20" Margin="7,427,0,0" VerticalAlignment="Top" Width="185" FontSize="8" RenderTransformOrigin="0.5,0.5" FontFamily="Capture it(RUS BY LYAJKA)" Background="{x:Null}" Foreground="White">
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>

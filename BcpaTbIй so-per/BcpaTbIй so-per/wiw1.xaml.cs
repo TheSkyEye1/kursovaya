@@ -20,10 +20,39 @@ namespace BcpaTbIй_so_per
     public partial class wiw1 : Window
     {
         sql sqlite =  new sql();
+        public bool krinje = false;
+        public int loh = 0;
         public wiw1()
         {
             InitializeComponent();
             somegrid.ItemsSource = sqlite.output();
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            if(loh == 0)
+            {
+                e.Cancel = false;
+            }
+            if (Visibility == Visibility.Hidden)
+            {
+
+                e.Cancel = false;
+
+            }
+            else
+                e.Cancel = true;
+        }
+
+        private void Window_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
+        {
+            if (Visibility == Visibility.Visible)
+            {
+                //MessageBox.Show("oh hi");
+                sqlite.info.Clear();
+                somegrid.ItemsSource = sqlite.output();
+                somegrid.Items.Refresh();
+            }
         }
     }
 }

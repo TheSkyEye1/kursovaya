@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BcpaTbIй_so_per"
         mc:Ignorable="d"
-        Title="scores" Height="340" Width="420" Icon="img/Podryv-zhopy-minoy-dlya-Sergo (1).ico" ResizeMode="NoResize" WindowStyle="None" WindowStartupLocation="CenterOwner">
+        Title="scores" Height="340" Width="420" Icon="img/Podryv-zhopy-minoy-dlya-Sergo (1).ico" ResizeMode="NoResize" WindowStyle="None" WindowStartupLocation="CenterOwner" Closing="Window_Closing" IsVisibleChanged="Window_IsVisibleChanged">
     <Window.Background>
         <ImageBrush ImageSource="img/123 (1).jpg"/>
     </Window.Background>
@@ -34,7 +34,7 @@
         </Style>
     </Window.Resources>
     <Grid>
-        <DataGrid x:Name="somegrid" HorizontalAlignment="Left" Height="250" Margin="16,67,0,0" VerticalAlignment="Top" Width="378" BorderBrush="{x:Null}" Background="{x:Null}" RenderTransformOrigin="0.5,0.5" Cursor="Cross">
+        <DataGrid x:Name="somegrid" HorizontalAlignment="Left" Height="251" Margin="14,67,0,0" VerticalAlignment="Top" Width="384" BorderBrush="{x:Null}" Background="{x:Null}" RenderTransformOrigin="0.5,0.5" Cursor="Cross">
             <DataGrid.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>

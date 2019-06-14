@@ -14,14 +14,11 @@ namespace BcpaTbIй_so_per
         public bool tryer(int x, int y)
         {
 
-
             if (x < 0 || x > gr.GetLength(0) - 1)
                 throw new Exception("Выход за границу");
             if (y < 0 || y > gr.GetLength(1) - 1)
                 throw new Exception("Выход за границу");
 
-            if (gr[x, y] == 0)
-                return false;
             int smolx = x - 1;
             if (smolx < 0)
                 smolx = 0;
@@ -37,9 +34,9 @@ namespace BcpaTbIй_so_per
                 maxy = gr.GetLength(1) - 1;
 
 
-            for (int i = smolx; i < bigix; i++)
+            for (int i = smolx; i <= bigix; i++)
             {
-                for (int j = miny; j < maxy; j++)
+                for (int j = miny; j <= maxy; j++)
                 {
                     if (gr[i, j] == 0)
                     {
@@ -47,7 +44,7 @@ namespace BcpaTbIй_so_per
                     }
                 }
             }
-            return true ;
+            return true;
         }
         public void sozdavator(int n)
         {
@@ -138,6 +135,7 @@ namespace BcpaTbIй_so_per
                 if(gr[x,y] == 0)
                 {
                     gr[x, y] += 10;
+
                     try { if (promatb(x - 1, y) == true) otkrivashka(x - 1, y); } catch { };
                     try { if (promatb(x, y - 1) == true)  otkrivashka(x, y - 1); } catch { };
                     try { if (promatb(x + 1, y) == true)  otkrivashka(x + 1, y); } catch { };

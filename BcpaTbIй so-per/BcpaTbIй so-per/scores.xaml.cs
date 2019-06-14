@@ -22,6 +22,7 @@ namespace BcpaTbIй_so_per
     {
         bool firsttime = true;
         bool ooooo = false;
+        bool MOGUYAZAKRITETOGOVNOUZHE = false;
         BitmapImage minecheck;
         public class data
         {
@@ -62,6 +63,7 @@ namespace BcpaTbIй_so_per
             somegrid.ItemsSource = sql1.output();
             somegrid.Items.Refresh();
             ooooo = true;
+            win_name.IsReadOnly = true;
         }
 
         private void Win_name_MouseEnter(object sender, MouseEventArgs e)
@@ -103,6 +105,7 @@ namespace BcpaTbIй_so_per
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
+            MOGUYAZAKRITETOGOVNOUZHE = true;
             this.Close();
         }
 
@@ -125,6 +128,14 @@ namespace BcpaTbIй_so_per
             ImageBrush ib = new ImageBrush();
             ib.ImageSource = minecheck;
             but.Background = ib;
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            if (MOGUYAZAKRITETOGOVNOUZHE == false)
+            {
+                e.Cancel = true;
+            }
         }
     }
 }

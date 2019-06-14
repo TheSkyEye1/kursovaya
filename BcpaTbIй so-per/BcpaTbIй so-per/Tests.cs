@@ -27,13 +27,15 @@ namespace BcpaTbIй_so_per
                 for (int j = 0; j < 5; j++)
                     if (logic.gr[i, j] == 9)
                         g++;
+
             Assert.AreEqual(10, g);
 
             bool trying = false;
             for (int h = 0; h < logic.gr.GetLength(0); h++)
                 for (int b = 0; b < logic.gr.GetLength(1); b++)
-                    if (logic.tryer(h, b) == true)
+                    if (logic.tryer(h, b) == false)
                         trying = true;
+
             Assert.AreEqual(true, trying);
 
             var ex =Assert.Throws<Exception>(() => logic.zakladka(0, 10));
@@ -112,6 +114,7 @@ namespace BcpaTbIй_so_per
             };
 
             logic.otkrivashka(0, 4);
+
             Assert.AreEqual(10, logic.celler(0, 4));
             logic.otkrivashka(0, 0);
             Assert.AreEqual(11, logic.celler(0, 0));
@@ -129,12 +132,16 @@ namespace BcpaTbIй_so_per
             public int highscore { get; set; }
         }
         
+        //!= null
+        //is true
+
         [TestCase]
         public void output()
         {
             
             sql sqlite = new sql();
             var res = sqlite.output();
+            
             Assert.AreEqual(res, sqlite.output());
 
         }
@@ -144,6 +151,69 @@ namespace BcpaTbIй_so_per
         {
             sql sqlite = new sql();
             Assert.AreEqual(true, sqlite.input(1,1,"qwe"));
+        }
+        [TestCase]
+        public void inpout()
+        {
+            sql sqlite = new sql();
+          sqlite.input(0, 14, "ТЫ КТО ТАКОЙ ЧТОБ ЭТО ДЕЛАТЬ");
+
+            var res = sqlite.output();
+            //  for (int i = 0; i < res.Count(); i++)
+            //  {
+            int raz = (res.Count);
+            Assert.AreEqual(43, res[0].highscore);
+            Assert.AreEqual(0, res[raz-1].highscore);
+            Assert.AreEqual("ТЫ КТО ТАКОЙ ЧТОБ ЭТО ДЕЛАТЬ", res[raz-1].name.ToString());
+        }
+        [TestCase]
+        public void inputishe()
+        {
+            sql sqlite = new sql();
+            Assert.AreEqual(true, sqlite.input(43, 43, "fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"));
+           
+        }
+
+        [TestCase]
+        public void megatest()
+        {
+            GameLogic logic = new GameLogic();
+            int allah = 50;
+            Random rnd = new Random();
+
+            for(int i = 0; i<10000; i++)
+            {
+                logic.gr = new int[10, 10];
+                bool trying = false;
+                int tag = rnd.Next(0, 99);
+                logic.zakladka(allah, tag);
+                for (int h = 0; h < logic.gr.GetLength(0); h++)
+                    for (int b = 0; b < logic.gr.GetLength(1); b++)
+                        if (logic.tryer(h, b) == false)
+                        {
+                            trying = true;
+                            Assert.AreEqual(true, trying);
+                        }
+
+
+            }
+        }
+
+        [TestCase]
+        public void lastchanse()
+        {
+            GameLogic logic = new GameLogic();
+            logic.gr = new int[,]
+            {
+                { 9, 9, 9, 0 },
+                { 9, 9, 9, 0 },
+                { 9, 9, 9, 0 },
+                { 0, 0, 0, 0 }
+            };
+            Assert.AreEqual(true, logic.tryer(0, 0));
+            Assert.AreEqual(true, logic.tryer(1, 1));
+            Assert.AreEqual(false, logic.tryer(2, 2));
+            Assert.AreEqual(false, logic.tryer(3, 3));
         }
     }
 }

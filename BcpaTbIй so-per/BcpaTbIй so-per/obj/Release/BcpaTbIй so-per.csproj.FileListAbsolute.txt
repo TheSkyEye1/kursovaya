@@ -1,0 +1,40 @@
+C:\Users\Сергей\Desktop\kursovaya\BcpaTbIй so-per\BcpaTbIй so-per\bin\Release\NUnit3.TestAdapter.dll
+C:\Users\Сергей\Desktop\kursovaya\BcpaTbIй so-per\BcpaTbIй so-per\bin\Release\NUnit3.TestAdapter.pdb
+C:\Users\Сергей\Desktop\kursovaya\BcpaTbIй so-per\BcpaTbIй so-per\bin\Release\nunit.engine.dll
+C:\Users\Сергей\Desktop\kursovaya\BcpaTbIй so-per\BcpaTbIй so-per\bin\Release\nunit.engine.api.dll
+C:\Users\Сергей\Desktop\kursovaya\BcpaTbIй so-per\BcpaTbIй so-per\bin\Release\BcpaTbIй so-per.exe.config
+C:\Users\Сергей\Desktop\kursovaya\BcpaTbIй so-per\BcpaTbIй so-per\bin\Release\BcpaTbIй so-per.exe
+C:\Users\Сергей\Desktop\kursovaya\BcpaTbIй so-per\BcpaTbIй so-per\bin\Release\BcpaTbIй so-per.pdb
+C:\Users\Сергей\Desktop\kursovaya\BcpaTbIй so-per\BcpaTbIй so-per\bin\Release\EntityFramework.dll
+C:\Users\Сергей\Desktop\kursovaya\BcpaTbIй so-per\BcpaTbIй so-per\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\Сергей\Desktop\kursovaya\BcpaTbIй so-per\BcpaTbIй so-per\bin\Release\nunit.framework.dll
+C:\Users\Сергей\Desktop\kursovaya\BcpaTbIй so-per\BcpaTbIй so-per\bin\Release\System.Data.SQLite.dll
+C:\Users\Сергей\Desktop\kursovaya\BcpaTbIй so-per\BcpaTbIй so-per\bin\Release\System.Data.SQLite.EF6.dll
+C:\Users\Сергей\Desktop\kursovaya\BcpaTbIй so-per\BcpaTbIй so-per\bin\Release\System.Data.SQLite.Linq.dll
+C:\Users\Сергей\Desktop\kursovaya\BcpaTbIй so-per\BcpaTbIй so-per\bin\Release\EntityFramework.xml
+C:\Users\Сергей\Desktop\kursovaya\BcpaTbIй so-per\BcpaTbIй so-per\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\Сергей\Desktop\kursovaya\BcpaTbIй so-per\BcpaTbIй so-per\bin\Release\nunit.framework.pdb
+C:\Users\Сергей\Desktop\kursovaya\BcpaTbIй so-per\BcpaTbIй so-per\bin\Release\nunit.framework.xml
+C:\Users\Сергей\Desktop\kursovaya\BcpaTbIй so-per\BcpaTbIй so-per\bin\Release\System.Data.SQLite.xml
+C:\Users\Сергей\Desktop\kursovaya\BcpaTbIй so-per\BcpaTbIй so-per\bin\Release\System.Data.SQLite.dll.config
+C:\Users\Сергей\Desktop\kursovaya\BcpaTbIй so-per\BcpaTbIй so-per\obj\Release\BcpaTbIй so-per.csprojAssemblyReference.cache
+C:\Users\Сергей\Desktop\kursovaya\BcpaTbIй so-per\BcpaTbIй so-per\obj\Release\imsucc.g.cs
+C:\Users\Сергей\Desktop\kursovaya\BcpaTbIй so-per\BcpaTbIй so-per\obj\Release\MainWindow.g.cs
+C:\Users\Сергей\Desktop\kursovaya\BcpaTbIй so-per\BcpaTbIй so-per\obj\Release\scores.g.cs
+C:\Users\Сергей\Desktop\kursovaya\BcpaTbIй so-per\BcpaTbIй so-per\obj\Release\wiw1.g.cs
+C:\Users\Сергей\Desktop\kursovaya\BcpaTbIй so-per\BcpaTbIй so-per\obj\Release\App.g.cs
+C:\Users\Сергей\Desktop\kursovaya\BcpaTbIй so-per\BcpaTbIй so-per\obj\Release\BcpaTbIй so-per_Content.g.cs
+C:\Users\Сергей\Desktop\kursovaya\BcpaTbIй so-per\BcpaTbIй so-per\obj\Release\BcpaTbIй so-per_MarkupCompile.cache
+C:\Users\Сергей\Desktop\kursovaya\BcpaTbIй so-per\BcpaTbIй so-per\obj\Release\BcpaTbIй so-per_MarkupCompile.lref
+C:\Users\Сергей\Desktop\kursovaya\BcpaTbIй so-per\BcpaTbIй so-per\obj\Release\imsucc.baml
+C:\Users\Сергей\Desktop\kursovaya\BcpaTbIй so-per\BcpaTbIй so-per\obj\Release\MainWindow.baml
+C:\Users\Сергей\Desktop\kursovaya\BcpaTbIй so-per\BcpaTbIй so-per\obj\Release\scores.baml
+C:\Users\Сергей\Desktop\kursovaya\BcpaTbIй so-per\BcpaTbIй so-per\obj\Release\wiw1.baml
+C:\Users\Сергей\Desktop\kursovaya\BcpaTbIй so-per\BcpaTbIй so-per\obj\Release\BcpaTbIй so-per.g.resources
+C:\Users\Сергей\Desktop\kursovaya\BcpaTbIй so-per\BcpaTbIй so-per\obj\Release\BcpaTbIй_so_per.Properties.Resources.resources
+C:\Users\Сергей\Desktop\kursovaya\BcpaTbIй so-per\BcpaTbIй so-per\obj\Release\BcpaTbIй_so_per.Resources.resources
+C:\Users\Сергей\Desktop\kursovaya\BcpaTbIй so-per\BcpaTbIй so-per\obj\Release\BcpaTbIй so-per.csproj.GenerateResource.cache
+C:\Users\Сергей\Desktop\kursovaya\BcpaTbIй so-per\BcpaTbIй so-per\obj\Release\BcpaTbIй so-per.csproj.CoreCompileInputs.cache
+C:\Users\Сергей\Desktop\kursovaya\BcpaTbIй so-per\BcpaTbIй so-per\obj\Release\BcpaTbIй so-per.csproj.CopyComplete
+C:\Users\Сергей\Desktop\kursovaya\BcpaTbIй so-per\BcpaTbIй so-per\obj\Release\BcpaTbIй so-per.exe
+C:\Users\Сергей\Desktop\kursovaya\BcpaTbIй so-per\BcpaTbIй so-per\obj\Release\BcpaTbIй so-per.pdb
